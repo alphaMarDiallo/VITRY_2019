@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <p>faire un form 
+    avec un menu déroulant (balise select) qui contient plusieurs balises options (un animal par option)
+    </p>
+
+    <form action="#">
+        <label for="animaux">Sélectionne ton animal fétiche</label><br>
+        <select name="animaux" id="animaux">
+            <option value="boa">Boa</option>
+            <option value="baleine">Baleine</option>
+            <option value="koala">Koala</option>
+        </select>
+    </form>
+    <p class="info"></p>
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            console.log('jquery chargé');
+            
+            // l'événement change survient quand l'utilisateur choisit une nouvelle option dans la liste déroulante
+            $('select').change(function(){
+                
+                // ici on affiche dans .info la valeur de l'option choisie par par l'utilisateur dans la liste déroulante
+                $('.info').html('Ton animal préféré est : ' + $(this).val());
+
+            })
+
+        }) // fin du scope jquery
+    </script>
+</body>
+</html>

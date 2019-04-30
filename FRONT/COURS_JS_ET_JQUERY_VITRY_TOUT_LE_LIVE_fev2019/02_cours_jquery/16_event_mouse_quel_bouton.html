@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img class="cible" src="images/photo1.jpg" alt="">
+    <p class="info"></p>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            console.log('jquery chargé');
+
+            // lors du clic sur l'image 
+            $('.cible').mousedown(function(ev){
+                // etape 1 : on affiche la chaine 'coucou' dans le paragraphe .info
+                // $('.info').html('coucou !');
+
+                // etape 2 : affiche dans .info le type d'événement
+                // prélable : ajouter un paramètre ev dans les parenthèses de la déclaration de fonction : function(ev)
+                
+                $('.info').html(ev.type); // affiche le type d'événement (mousedown) dans le p .info
+
+                $('.info').html(ev.which); // affiche le numéro du bouton de la souris
+                /* 
+                bouton gauche de la souris : 1
+                bouton central de la souris : 2
+                bouton droit de la souris : 3
+                */
+
+                // AU final on va afficher dans .info la concaténation du type et du which
+
+                 $('.info').html('Evénement : ' + ev.type + '<br>' + 'Bouton pressé : ' + ev.which); 
+
+                
+
+            }) // fin du mousedown sur l'image
+
+       }) // fin du scope jquery
+    </script>
+</body>
+</html>

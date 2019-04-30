@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        article{
+            width: 200px;
+            background: gold;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <article>Contenu de article</article>
+    <p class="resultat">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas numquam at molestias ipsum modi? Sequi reiciendis odio at accusamus soluta placeat debitis, rem id beatae impedit, magnam qui dolores magni!</p>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+    $(function(){
+        // teste en console si jquery est chargé
+        console.log('jQuery bien chargé');
+
+        // sélectionner la balise article avec le sélecteur CSS : article
+        $('article').on('click', function(){
+            // tout ce qu'on veut faire au clic sur l'article, this c'est l'article qui est cliqué
+            $(this).css("background-color", "indianred");
+            $('.resultat').css("background-color", "coral");
+        })
+
+        // sélectionner le paragraphe resultat, lui donner un événement on click 
+       //  changer sa couleur de fond et sa taille de texte
+        $('.resultat').on("click", function(){
+           // $(this).css("background-color", "hotpink");
+
+           $(this).css({
+
+               "background-color": "hotpink",
+               "font-size": ".5rem",
+               "transform": "rotate(.25turn) scaleX(.5)",
+               "border-radius": "50%"
+               
+               });
+        })
+        
+
+    })// fin du scope jquery
+    </script>
+
+</body>
+</html>

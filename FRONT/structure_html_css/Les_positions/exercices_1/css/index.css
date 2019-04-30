@@ -1,0 +1,47 @@
+html{
+     background:url("https://tse2.explicit.bing.net/th?id=OIP.9pAPDD8ixkpj73tm8Z6FewHaE8&pid=Api");
+    height: 100%;
+    width: 100%;
+    border: 10px solid mistyrose;
+}
+
+/*body{
+    background:url("https://tse2.explicit.bing.net/th?id=OIP.9pAPDD8ixkpj73tm8Z6FewHaE8&pid=Api");
+    height: 100%;
+    width: 100%;
+    border: 5px solid mistyrose;
+
+}*/
+h1{
+    color: white;
+    text-align: center;
+    font-size: 60px;
+}
+.carre{
+	width: 170px;
+	height: 170px;
+	border: 3px solid white;
+	margin: 10px;
+	float: left;
+	text-align: center;
+	font-size: 45px;
+	color: pink;
+	line-height: 150px;
+	box-shadow:5px 5px 5px pink;
+	/* box-shadow:4px 4px 4px rgba(0,0,0,0.5); */
+}
+.carre:hover{
+	 background: white; 
+	/* background:mistyrose; */
+	border: 10px solid black ;
+	transition: 1s;
+	transform: rotate(80deg);
+	border-radius: 100px;
+	color:black ;
+	box-shadow:6px 6px 6px white;
+}
+.clear{
+    clear: both;
+}
+
+    

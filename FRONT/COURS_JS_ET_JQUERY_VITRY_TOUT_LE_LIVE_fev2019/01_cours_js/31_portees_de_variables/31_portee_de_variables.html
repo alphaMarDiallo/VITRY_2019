@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>La portée des fonctions et les conflits</h1>
+    <p>La portée est un concept très important en javascript lorsqu'on a affaire à des fonctions. Quand on crée une fonction, les variables et autres choses qui sont définies à l'intérieyur de la fonction ont leur propre portée. Ce qui signifie qu'elles sont enfermées dans leur propre compartiment séparé et qu'elles ne peuvent pas être affectées par d'autres fonctions ou par le code en dehors de la fonction (métaphore du zoo, chaque animal a son propre enclos, la portée de la fonction)</p>
+    <p>Le plus haut niveau en dehors de toutes vos fonctions est appelé la portée globale. Les valeurs définies dans la portée globale sont accessibles à partir de n'importe quelle partie du code (le gardien du zoo qui a toutes les clés)</p>
+
+    <p>Le javascript est construit de cette façon pour plusieurs raisons et en particulier pour la sécurité et l'organisation. <br>
+    Parfois, vous ne voulez pas que vos variables soient accessibles depuis toutes les autres parties du code - des scripts externes appelés depuis l'extérieur de votre fonction pourraient ionterférer avec votre code et causer des problèmes parce qu'ils utilisent les même noms de variables que d'autres parties du code, provoquant des conflits. Peut être fait par malveillance ou, par accident. 
+    </p>
+
+    <p>Par exemple, on a un fichier html qui appelle deux fichiers javascript externes, et que les deux ont une variable et une fonction définie qui utilisent le même nom. </p>
+
+    <script src="script1.js"></script>
+    <script src="script2.js"></script>
+    <script>
+        // on invoque la fonction ditSalut() qui peut être aussi bien défine dans un script interne que dans script externe
+    ditSalut(); // ce sont les parenthèses qui éxécutent la fonction
+
+    </script>
+</body>
+</html>

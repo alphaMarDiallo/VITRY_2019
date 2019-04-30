@@ -1,0 +1,103 @@
+html{
+    font-size: 62.5%; /* base 10px */
+}
+body{
+    font: 1.4rem/1.5 arial, helvetica, sans-serif;
+    margin: 0;
+    background: pink;
+}
+
+/* LAYOUT / FONDATIONS */
+
+header{
+    background: url(img/dinosaure.jpg) no-repeat 50% -170px;
+    background-size: cover;
+     /* height: 600px;TEMPORAIRE */
+    color: white;
+    position: relative; /* pour caler le badeau en absolute */
+    height: 800px;
+}
+.wrapper{
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 2px darkred solid;
+   /* à remplacer par un padding de 1px si nécessaire quand on supprimera les border (fusions des marges verticales) */
+}
+
+
+/* la nav */
+
+nav{
+    border: 2px green solid;
+    background-color: rgba(0, 0, 0, .5);
+    line-height: 5; /* c'est normal de ne pas donner d'unité */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    border: 2px orchid solid;
+}
+nav li{
+    border: 2px gold solid;
+}
+
+/* les logo et bandeau */
+
+header .logo{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+header .bandeau{
+    border: 1px blue solid;
+    position: absolute; 
+    /* attention bien mettre position: relative sur le header*/
+    right: 0;
+    bottom: 0;
+}
+
+/* CONTENU DE MAIN */
+
+main section{
+    padding-top: 5rem;
+    border: 2px pink solid;
+    margin: 0 auto;
+}
+section.presentation{
+    width: 60%;
+}
+.titre_n2{
+    text-align: center;
+}
+img.entree_parc{
+    width: 100%;
+}  
+iframe{
+    width: 100%;
+    display: block;
+}
+
+.partenaires img{
+    width: 80px;
+    margin: auto;
+    display: block;
+}
+
+
+/* CONTENU DE FOOTER */
+
+footer{
+    background: black;
+    color: white;
+}
+
+footer > .wrapper{
+    padding-top: 10rem;
+}

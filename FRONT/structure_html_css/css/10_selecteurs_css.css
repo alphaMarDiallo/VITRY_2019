@@ -1,0 +1,93 @@
+/**{
+    font-family: sans-serif; /* police d'écriture
+}*/
+body{
+  background: url("https://www.suwena.net/sites/default/files/images/P1300172.jpg?itok=5GbwMeCY");
+  font-family: 'Dancing Script', cursive;
+  font-size:18px;
+}
+
+nav{
+    background: /*#000*/#01579b;
+    color: #fff;
+    padding: 0 0.5em;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    top: 0; /* position à partir du haut de l'écran*/
+    left: 0; /* position à partir de la gauche de l'écran*/
+    margin: 0;
+}
+
+nav a{ /* tous les liens à l'intérieur de la balise nav */
+/*border: 2px solid black;*/
+border-radius: 15px;
+box-shadow: 15px 5px 5px black;
+    float: left; /* effet flottant à gauche */
+    text-decoration: none; /* pas d'héritage avec effet souligné comme c'est standard pour les liens sous tous les navigateurs */
+    color: /*#fff; /* couleur du texte */yellow;
+    background: /*#000; /* couleur de fond */
+    height: 2.8em; /* hauteur de la nav */
+    line-height: 2.7em; /* interligne */
+    padding: 0em 2em; /* marges intérieures - on les fait dans le sens des aiguilles d'une montre par convention (haut, droite, bas, gauche) */
+    font-size: 1.2em; /* taille du texte */
+    transition: 2s;/* temps de transition lors du hover (survol de la souris) : ici 2 secondes */
+}
+nav a:hover{/* tous les liens au survol de la souris dans la nav */
+    background: /*#fda500; /* couleur de fond */yellow;
+    color: #000; /* couleur du texte */
+}
+
+/*1er container*/
+.container{
+    /*width: 70%;*/
+    background: transparent;
+    box-shadow: 15px 5px 5px darkblue;
+    width:70%;
+    margin: 4% auto 2% auto;
+    /*background: #f1fcde;*/
+    padding: 2em;
+    color:yellow;
+}
+
+mark{
+    background: #b5a7cf;
+}
+
+/*2ème container*/
+.container1{
+  /*width: 70%;*/
+    width: 73%;
+    margin: 2% auto; /*contraction pour 2% auto 2% auto*/
+    background: #f0e9fd;
+    background: transparent;
+  /*  padding: 2%;*/
+}
+
+/*containers 3 et 4 imbriqués dans le container1*/
+.container2, .container3{
+  box-shadow: 15px 5px 5px darkblue;
+    width: 44.5%;
+    /*background: #f1fcde;*/
+    background: transparent;
+    padding: 2%;
+    float: left;
+    height:550px;
+    color:yellow;
+}
+.container2{
+    margin-right: 1.5%;
+}
+.container3{
+    margin-left: 1.5%;
+}
+
+/*5ème container*/
+.container4{
+    margin-top: 2em;
+    background: transparant;
+}
+
+.clear{
+    clear: both;
+}

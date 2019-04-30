@@ -1,0 +1,60 @@
+/*---Commentaires en css*/
+*{
+  text-align: right;
+}
+/*html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}*/
+body{
+  background: #ffeeff;/* couleur de fond de mon body*/
+}
+header{
+  background-color:  #900c3f;/* couleur de fond du header*/
+  color: white;/* couleur du texte*/
+  height: 100px;/* hauteur de mon header*/
+}
+nav{
+  background-color: #daf7a6;
+  height: 60px;
+}
+section{
+  background-color: navy;
+  height: 550px;
+}
+article{
+  background-color: #ff5733;
+  height:66px;
+}
+.jaune{/* Je cible une class avec un point devant */
+  background-color: yellow;
+}
+#noir{/* je cible un id avec un dièse devant*/
+  background-color: black;
+  color: white;
+  text-align: justify;
+  font-size:25px;
+}
+footer{
+  background-color:#daf7a6;
+   height: 100px;
+}
+nav, footer{
+  color: purple;
+}

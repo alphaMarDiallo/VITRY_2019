@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Que se passe-t-il si les variables sont appelées de l'intérieur d'une autrre fonction ?
+    </p>
+
+    <script>
+    // ETAPE C
+
+// la variable x est la portée globale
+    var x = 1;
+
+// la variable y et z sont dans les portées locales car elles sont dans les fonctions
+    function a(){
+        var y = 2;
+        sortie(x);
+    }
+
+    function b(){
+        var z = 3;
+        sortie(x);
+    }   
+  
+    function sortie(valeur){
+        var para = document.createElement('p');
+        document.body.appendChild(para);
+        para.textContent = 'La valeur est : ' + valeur;
+    }
+    sortie(x);
+    a();
+    b();
+
+    // Les deux fonctions a() et b() appelées doivent renvoyer la valeur x (qui est à 1). Cela fonctionne très bien car même si la fonction sortie() n'est pas dans la m^me portée que celle da,ns laquelle x est définie, x est une variable globale et donc elle est disponible dans n'importe quelle partie du code.
+    </script>
+</body>
+</html>

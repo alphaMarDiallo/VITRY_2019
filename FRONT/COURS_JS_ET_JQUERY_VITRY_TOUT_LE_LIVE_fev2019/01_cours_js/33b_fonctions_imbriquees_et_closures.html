@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ls fonctions imbriquées et closures</h1>
+    <p>Il faut garder à l'esprit qu'on peut appeler une fonction de n'importe où, même à l'intérieur d'une autre fonction. <br>
+    Les fonctions imbiquées sont souvent utilisées comme un moyen de garder du code bien organisé. Une grande fonction complexe est plus facile à comprendre si vous la divisez en plusieurs sous-fonctions.
+    </p>
+
+    <script>
+        // ETAPE A : on va faire une meta fonction qui imbrique plusieurs sous fonctions
+
+        function maMetaFonction(){
+            var maVariable = 1;
+            sousFonction1(maVariable);
+            sousFonction2(maVariable);
+            sousFonction3(maVariable);
+        } // FIN DE LA metaFonction
+
+        function sousFonction1(valeur){
+            document.write(valeur);
+        }
+
+        function sousFonction2(valeur) {
+            document.write(valeur);
+        }
+
+        function sousFonction3(valeur) {
+            document.write(valeur);
+        }
+        
+        // ici on déclenche la metaFonction
+        maMetaFonction();
+
+        //Ici nous avons bien accès à la variable maVariable car on a passé sa valeur dans la metaFonction et les sousFonctions en tant que paramètre.
+    
+    </script>
+</body>
+</html>

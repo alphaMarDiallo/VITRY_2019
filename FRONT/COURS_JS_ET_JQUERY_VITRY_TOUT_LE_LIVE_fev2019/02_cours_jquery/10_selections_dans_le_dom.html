@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px darkred solid;
+            width: 70%;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .lienActif{
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">    
+        <div class="colLeft">
+            <h2 class="titleSite">
+               <a href="#">WF3 / Pole S</a>
+            </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, provident obcaecati. Deserunt sint aperiam quos esse hic rem quisquam nulla inventore amet suscipit incidunt obcaecati totam id, provident voluptas doloremque?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente ipsam quia tempore facere quam tenetur unde, animi debitis totam ullam obcaecati a ea quas dolorum sed aliquam sit veniam velit.</p>
+            <a href="ressources.pdf">Les ressources du cours</a>
+        </div>
+        <div class="colRight">
+           <h2 class="titleChapter">Cours jQuery</h2>
+           <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga beatae, dolores error, voluptatibus ullam a quos ab sequi similique cumque minus dolore tempora placeat in ducimus voluptate iure quam non.</p>
+            <form action="#">
+                <input type="date">
+                <input type="submit">
+            </form>
+        </div>
+    </div> <!-- FIN DU .container-->
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+    $(function(){
+        console.log('jquery chargé');
+        
+        /* 
+        // sélectionne avec jquery la ou les div qui ont la class=container
+        $('div.container')
+        // sélectionne avec jquery le ou les éléments qui ont la   class=container
+        $('.container')
+        
+        // mettre dans une variable monElement les éléments qui ont la class = container */
+        var monElement = $('.container');
+
+        console.log(monElement.children()); // sélectionne tous les enfants direct de .container, renvoie dans la console les 2 divs colLeft et colRight
+
+        console.log(monElement.children('.colLeft')); // sélectionne parmi les enfants de .container, celui qui a la class="colLeft"
+
+        console.log(monElement.children().eq(1)); // sélectionne, dans la liste des élements enfant de container, le deuxième de la liste (on commence toujours par zéro quand on compte danss une liste)
+        // ici la console renvoie l'objet div colRight
+
+    
+         console.log(monElement.children().find('h2')); // sélectionne tous les h2 parmi tous les descendants
+
+         var monPara = $('p.para'); // renvoie le paragraphe qui a la class=para
+
+         console.log(monPara.next()); // renvoie le voisin suivant de para qui est donc le form
+
+         console.log(monPara.prev()); // renvoie de voisin précédent de .para qui est donc le titre h2.titleChapter
+
+        console.log(monPara.parent());  // renvoie le parent du p.para qui est les div.colRight 
+
+        console.log(monPara.next().next()); // renvoie un objet jQuery vide car il n'y a rien après le form
+
+        // chercher combien il y a de liens dans la page
+        console.log($('a').length); // retourne 1 car on n'a qu'un seul lien dans la page
+
+        // chercher combien d'objets h2 ont la class titleChapter
+        console.log($('h2.titleChapter').length); 
+
+        // chercher combien d'objets a (combien de liens) dont l'attribut href est égal à #
+         console.log($('a[href = "#"]').length);	
+
+        // chercher combien d'objets a (combien de liens) dont l'attribut href se termine par .pdf 
+
+        console.log($('a[href $= ".pdf"]').length);
+        // au chargement de la page ce lien sera rouge
+        $('a[href $= ".pdf"]').css("color", "red");
+        
+        /* Au clic sur ce lien, faire un toggleClass (.lienActif) pour changer sa couleur
+        
+        */ 
+        $('a[href $= ".pdf"]').hover(function(){
+
+            $(this).toggleClass('lienActif');
+
+        })
+
+    }) // fin du scope jquery
+    </script>
+</body>
+</html>

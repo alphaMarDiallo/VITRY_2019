@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+      // ici on déclare la variable a  
+      var a = 10;
+      
+      // ici on lui réassigne une nouvelle valeur
+      var a = 8;
+
+     //  Pour tester une variable, on ouvre la console, on écrit le nom de la variable à droite des >> et on appuie sur ENTER
+     
+     // autre façon de tester 
+
+        // affiche une alert contenant la valeur de la variable a
+        // NE PAS METTRE DE GUILLEMETS
+        // alert(a);
+
+        // affiche une alert contenant la chaine de caractère a
+        // alert('avion'); 
+    
+        // 3e façon de tester
+        // On écrit dans le script 
+        
+        // console.log(a);
+      
+      // résultat : le navigateur affiche le résultat de a dans la console.
+
+      var b = 4;
+
+// si on veut faire un calcul avec une variable non définie, le navigateur affichera une erreur en console : Reference Error: c is not defined
+
+     // ici il y a une erreur car la la variable c n'existe pas:  ajoute = a + c;
+    // Attention js est sensible à la casse (case sensitive) donc A est DIFFERENT de a, donc l'instruction suivante contient aussi une reference error car la variable A n'est pas déclarée
+    // ajoute = A + b; 
+    ajoute = a + b; // fonctionne correctement car les variables a et b sont bien déclarées.
+
+      // afficher le résultat de ajoute dans une alert
+      // alert(ajoute);
+      // afficher le résultat de ajoute en console
+        // console.log(ajoute);
+
+        // autre facon de déclarer une variable 
+        var maVariable;
+        maVariable = 'Eva';
+
+        // console.log(maVariable);
+
+        // on déclare la variable soustrait et on lui assigne la valeur a - b
+        // on affiche le résultat en console
+        soustrait = a - b;
+        // console.log(soustrait);
+        // la console affiche 4
+
+        var message;
+        message = 'Hello';
+
+        message = 'World';
+
+        var hello = 'Hello World';
+
+        // alert(message);
+
+// assigne à la variable message, le contenu de la variable hello
+// résultat : nos deux variables hello et message ont lze même contenu 'Hello World'
+        message = hello;
+    
+        // alert(message);
+
+        prenom = "Gerard";
+        age = 22;
+
+// on fait une concaténation avec l'opérateur +
+// résultat : Gérard a 22 ans
+        console.log(prenom + ' a ' + age + ' ans ');
+
+        document.write(prenom + ' a <br>' + age + ' ans ');
+        
+        // Ici on demande au navigateur si le chiifre 12 est inférieur ou égal à 13, le navigateur va répondre avec la valeur booléenne : true
+        console.log(12 <= 13);
+        // résultat en console : true
+
+    </script>
+</body>
+</html>

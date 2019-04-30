@@ -1,0 +1,54 @@
+body{
+  font-size: 25px;/* taille de police*/
+  background: lightgray;
+}
+h1{
+  background-color: yellow;
+  color: black;
+}
+section p{
+  color: red; /* tous les "p" à l'interieur de la balise "section"*/
+}
+section p:first-child{
+  color: blue; /* le premier <p>*/
+}
+section p:last-child{
+  color: lightgreen; /* le dernier des <p>*/
+}
+section p:nth-child(even){
+  color: purple; /* cible les <p> pairs*/
+}
+section p:nth-child(odd){
+  color: pink; /* cible les <p> impairs*/
+}
+section p:nth-child(3), section p:nth-child(10){
+  color: orange; /* je cible les <p> 3 et 10 en même temps*/
+}
+.zone1{/* pour cibler une class en css on met un point*/
+  color: darkgreen;
+}
+.zone2{
+  color: lightblue;
+}
+.lime{
+  color: brown;
+  font-size: 45px;
+}
+#zone3{/* Pour appeler un ID en CSS on met un dièse devant*/
+background-color: #f5deb3;
+}
+#zone3:after{/* rajouter du contenu après l'ID zone3*/
+  content:" rajouté après";
+}
+#zone3:before{/* rajouter du contenu avant l'ID zone 3*/
+  content:" Sandra Hérisson";
+  background-color: cyan;
+}
+li{
+  background-color: #00ff00;
+  color: darkred;
+}
+li:nth-child(2){
+  background-color: black;
+  color:white;
+}

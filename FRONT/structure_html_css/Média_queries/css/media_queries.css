@@ -1,0 +1,36 @@
+.zone-adaptative{
+  background-color: pink;
+  color: black;
+  padding: 10px;
+}
+@media (min-width: 768px){/*min-width: 768px=> à partir d'un écran large
+de 768px et au-dessus*/
+  .zone-adaptative{
+    width: 750px;
+    background-color: orange;
+  }
+}
+/*les média-queries définissent des points de rupture/ de transition
+d'affichage( break point)*/
+@media(min-width: 992px){/*992 et plus */
+  .zone-adaptative{
+    width: 970px;
+    background: blue;
+  }
+
+}
+@media (min-width){/*1200px et plus*/
+  .zone-adaptative{
+    width: 1170px;
+    background: yellow;
+  }
+
+}
+@media (max-width:450px ){
+  .zone-adaptative{
+    width:375px ;
+    background: purple;
+  }
+  /*permet de définir des conditions permettant aux styles d'être
+  appliqués aux contenus en fonction de l'affichage disponible(viewport)
+  de la résolution, de l'orientation, etc*/

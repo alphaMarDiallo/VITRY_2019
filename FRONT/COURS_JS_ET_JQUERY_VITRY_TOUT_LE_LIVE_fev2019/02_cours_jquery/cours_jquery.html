@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Jquery, une librairie javascript pour gagner en productivité <br>
+"Write less, Do more" = écrire moins, faire plus</h1>
+<h2>Version actuelle v3.3.1</h2>
+
+<p>JQuery c'est une bibliothèque javascript, ou un framework en anglais. Une boite à outils de blocs de code réutilisable.
+    Cette librairie est rapide, petite donc légère et riche en fonctionnalités. 
+</p>
+<p>Elle simplifie considérablement la navigation et la manipulation dans le DOM des pages HTML, la gestion des événements, l'animation et Ajax (Asynchronous Javascript And XML) grâce à une API (application Programming interface) facile à utilisetr et qui est pré testée pour nous et qui fonctionne sur une multitude de navigateurs.</p>
+<p>Jquery est elle-même codée en Javascript</p>
+<p>Polyvalence et extensibilité, Jquery a changé la façon de travailler de millions de développeurs.</p>
+
+<ul>
+    <li>Fonctions toutres faites, optimisées, qu'on utilisera souve,nt : appel Ajax, boucles, animations, toggle</li>
+    <li>résoud bcp de problèmes de compatibilité navigateurs. Jquery a des polyfills intégrés</li>
+    <li>Une lecture de code plus simple car les pb sont gérés par la librairie</li>
+</ul>
+    
+<p>Attention JQuery n'est pas à appliquer en pansement sur un code le (Tag Soup...)</p>
+
+<h2>Jquery a des millions de plugins additionnels</h2>
+
+<h3>Jquery UI : User Interface (interface utilisateur) Version Actuelle UI 1.12</h3>
+<p>C'est un ensemble d'interfaces utilisateurs, d'effets, de widgets, de thèmes conçus à partir de la librairie JQuery</p>
+<p>Si on a juste besoin d'un sélecteur de dates dans un formulaire, Jquery UI est un choix idéal.
+     https://jqueryui.com/datepicker/
+</p>
+
+<h3>Jquery Mobile Version 1.4.5 : est un eframework d'interaces utilisateur optimisé pour les écrans tactiles. </h3>
+
+<hr>
+
+<h1>Charger jQuery dans une page web.</h1>
+<p>La méthode la plus basique et la plus simple consiste à télécharger la librairie jquery.js sur  : <a href="https://jquery.com/download">le site officiel download</a>
+</p>
+<p>Faire un clic droit sur le lien de download : Download the compressed production jQuery 3.3.1 et choisir enregistrer la cible du lien sous : </p>
+<p>Il faut enregistrer ce fichier jquery-3.3.1.min.js dans le dossier js que vous aurez à la racine de votre site. </p>
+<p><strong>BIEN VERIFIER QUE LE FICHIER EST BIEN DANS LE DOSSIER JS</strong></p> 
+    <script src="chemin relatif vers notre fichier jquery.js"></script>
+<br> 
+Si notre librairie jquery se trouve dans le dossier js, le chemin relatif sera le suivant :
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    Ensuite on utilise une balise script interne (ou un lien vers notre fichier javascript externe)
+    <br>
+    On crée le scope jquery qui recevra TOUT NOTRE CODE 
+  
+    <script>
+        $(function(){
+            // on teste si jquery est bien chargé en affichant une console.log
+            console.log('Jquery est bien chargé')
+
+        })
+    </script>
+  
+<p>On teste dans la console du navigateur que le message 'Jquery est bien chargé' apparaît bien </p>
+<h3>Ne jamais continuer à coder sans avoir fait avec succès ce 1er test</h3>
+
+<hr>
+
+<h2>Sélectionner en jQuery</h2>
+<p>Le coeur de jQuery se trouve dans la sélection d'éléments pour ensuite exécuter des méthodes dessus.</p>
+<p>
+    $(selecteur) accepte en argument tout sélecteur CSS, jQuery nous renvoie ensuite une collection d'un ou plusieurs éléments DOM enveloppés dans un objet jQuery.
+</p>
+<p>
+    $('div') séléctionne tous les divs
+    $('.titre') séléctionne tous les éléments qui ont la class="titre"
+    $('#boite') sélectionne l'unique élément qui a l'id="boite"
+</p>
+<p>Cette enveloppe jQuery est celle qui donne accès à toutes les fonctionnalités de jQuery</p>
+<ul>
+    <li>Rajouter des classes</li>
+    <li>Modifier le contenu HTML</li>
+    <li>Afficher ou cacher des éléments</li>
+    <li>Les animer etc.</li>
+</ul>
+<p>Tous les éléments sélectionnés en javascript pur (document.getElementById, querySelector etc) sont des éléments DOM et tous ceux sélectionnés avec $('...') sont des éléments DOM dans une enveloppe jQuery</p>
+
+<h3>jQuery dispose de plusieurs méthodes pour parcourir l'arbre du document (le DOM)</h3>
+
+<ul>
+    <li>children() parcourt les enfants</li>
+    <li>find() parcourt les descendants</li>
+    <li>next() renvoie le voisin suivant</li>
+    <li>prev() renvoie le voisin précédent</li>
+    <li>parent() renvoie le parent</li>
+    <li>eq() renvoie, parmi une liste d'éléments, celui qui se trove à l'index fourni</li>
+</ul>
+
+<h2>Les getters et setters, ajouter, retirer des classes et savoir si on a déjà des class</h2>
+
+<ul>
+    <li>addClass() : ajoute une class</li>
+    <li>removeClass() : retire une class</li>
+    <li>toogleClass() : interrupteur ajoute / retire une class</li>
+    <li>hasClass() : tester l'existance d'une class</li>
+    <li>is() : tester si on a plusieurs classes</li>
+</ul>
+<p> $('#pierre').removeClass('vert grand').addClass('rouge petit');</p>
+
+
+
+<h2>Les événements</h2>
+<p>La plupart des intéractions de lm'utilisateur avec la page web peuvent être intercéptées et une action lancée en retour</p>
+<p>On peut dire à une fonction de s'éxécuter quand l'utilisateur clique sur un bouton ou bien quand il scrolle la fenêtre ou bien encore quand il appuie sur une touche du clavier</p>
+
+<ul>
+    <li>mouse (la souris): <br>
+        click : au clic sur l'élément <br>
+        mouseenter : lorsque la souris passe par dessus la zone de l'élément <br>
+        mouseleave : lorsque la souris sort de cette zone
+    </li>
+    <li>keyboard (le clavier) <br>
+        keydown : une de clavier a été enfoncée <br>
+        keyup : une touche de clavier a été relachée
+    </li>
+    <li>window (la fenêtre du navigateur) <br>
+        scroll : défilement de la fenêtre <br>
+        resize : redimensionnement de la fenêtre <br>
+    </li>
+    <li>
+        form (les formulaires) <br>
+        change : pour les éléments <input>, <select> et <textarea>, quand l'utilisateur change une de leur valeur <br>
+        focus et blur : lorsque la souris est dans l'input ou sort de l'input <br>
+        submit : à l'envoi du formulaire    
+    </li>
+    <li>document (le contenu DOM) <br>
+        DOMContentLoaded : lancé lorsque le document HTML est complètement chargé et analysé sans atrendre que les images et le CSS soient chargés. 
+    </li>
+</ul>
+</body>
+</html>

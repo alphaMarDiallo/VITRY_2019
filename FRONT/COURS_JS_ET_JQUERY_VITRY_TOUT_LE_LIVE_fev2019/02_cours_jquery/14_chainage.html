@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .vert{
+            color: green;
+        }
+        .rouge{
+            color: red;
+        }
+        .grand{
+            font-size: 2em;
+        }
+        .petit{
+            font-size: .8em;
+        }
+        div{
+            background: cornflowerblue;
+        }
+        .pJaune{
+            background: gold;
+        }
+    </style>
+</head>
+<body>
+  <p id="pierre" class="grand vert">Pierre</p>  
+  <p id="jean" class="petit rouge">Jean</p>
+  <div>Mon div</div>
+  <article>Mon  super article</article>
+
+  <p class="pJaune">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ratione molestiae hic reiciendis fugiat at quisquam enim, laborum saepe facilis vel inventore error rem optio perferendis quam voluptates! Ex, hic.</p> 
+
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script>
+  $(function(){
+      console.log('jquery chargé');
+
+      // $('#pierre').removeClass('vert').addClass('rouge').removeClass('grand').addClass('petit');
+
+     // faire l'instruction suivant au clic sur #pierre
+     
+    $('#pierre').click(function(){
+        $(this).removeClass('vert grand').addClass('rouge petit');
+    })
+
+    $('#jean').click(function(){
+        //SI #jean a la class rouge ALORS on fait une alert qui affiche 'Jean est rouge'
+        // SINON on fait une alert qui affiche 'Jean n'est pas rouge'
+        if ($(this).hasClass('rouge'))
+            alert('Jean est rouge');
+        else
+            alert('Jean n\'est rouge');
+    })
+
+    /* la méthode hide() permet de cacher un élément
+    - c'est une animation
+    - s'applique sur tous les éléments ciblés avec le sélecteur
+    - à la fin du hide() on mettra une alert('fin du hide')
+    */ 
+
+    /* ici le div disparait en 2 secondes
+    1/ Une fois que sa disparition est terminée, on déclenche une fonction de callback (qui s'exécute quand l'action est terminée)
+    2/ dans cette fonction on cache l'article (durée de disparition de 1seconde 1000 millisecondes)
+    3/ on lui donne la propriété css color de valeur coral (couleur orange)
+    4/ on attend 2 secondes (delay(2000))
+    5/ on fait réapparaitre l'article avec show(500), durée de l'apparition une demi seconde
+    6/ Après le hide du div on affichje une alert('fin du hide du div')
+*/
+    $('div').hide(2000,  function(){
+            
+            $('article').hide(1000).css("color", "coral").delay(2000).show(500);
+
+           // alert('fin du hide');
+    }); // fin du hide
+    
+    $('.pJaune').fadeOut("slow", function(){
+        // ajouter une fonction de callback qui sera éxécutée une fois que la fonction de fadeOut sera terminée
+        $(this).fadeIn(2000, function(){
+            // encore un callback qui s'éxécute quand le fadeIn est terminé
+           alert('fin du fadeIn du pJaune');
+        });
+
+    })
+     
+
+
+  }) // fin du scope
+  
+  </script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+https://fr.wikipedia.org/wiki/Navigateur_web#/media/File:Timeline_of_web_browsers.svg
+https://www.w3.org/TR/css-backgrounds-3/#the-border-radius
+
+coompariatifs navigateurs
+https://caniuse.com/
+https://www.quirksmode.org/css/
+
+fr.wikipedia.org/wiki/Couleur_du_Web
+
+Taille et police par défaut d'une page HTML :
+Times, times New Roman, serif;
+16px
+
+Rappel sélecteurs CSS: 
+
+Un selecteur d'attribut :
+L'exemple suivant sélectionne tous les liens dont l'attribut href commence par http, 
+autrement dit , tous les liens externes, et leur met une couleur de fond gris clair:
+ 
+ [href^=http]{
+     background-color: silver;
+ }
+
+   [href^=http]{
+            color: black;
+            border-bottom: dotted black 3px;
+            padding: .5rem 2rem .5rem .5rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+            background:silver url(images/lien_externe.svg) no-repeat 100% 50%;
+
+        }
+
+
+        FEUILLE DE STYLE DU NAVIGATEUR PAR DEFAUT (UA Stylesheet):
+        https://www.w3.org/TR/CSS2/sample.html
+
+body            { margin: 8px }
+h1              { font-size: 2em; margin: .67em 0 }
+h2              { font-size: 1.5em; margin: .75em 0 }
+h3              { font-size: 1.17em; margin: .83em 0 }
+h4, p,
+blockquote, ul,
+fieldset, form,
+ol, dl, dir,
+menu            { margin: 1.12em 0 }
+h5              { font-size: .83em; margin: 1.5em 0 }
+h6              { font-size: .75em; margin: 1.67em 0 }
+h1, h2, h3, h4,
+h5, h6, b,
+strong          { font-weight: bolder }
+blockquote      { margin-left: 40px; margin-right: 40px }
+ol, ul, dir,
+menu, dd        { margin-left: 40px }
+ol              { list-style-type: decimal }
+ol ul, ul ol,
+ul ul, ol ol    { margin-top: 0; margin-bottom: 0 }
+
+
+Résumé : 
+body a margin:8px;
+tous les h1 à h6 et p ont aussi des marges top et bottom
+les ul et les ol ont des marges et un padding-left de 40px
+
+On utilise un reset pour élaguer les différences d'affichage sur les vieux navigateurs et corriger quelques bugs d'affichage.
+
+LES UNITES DE VALEUR EN CSS :
+
+le rem : 1rem est égal à 1 x la valeur de font-size définie pour la balise HTML
+Si on ne change pas la taille de la balise html on a du 16px par défaut. et donc 1rem vaudrait 16px
+
+le em : 1em est égal à 1 x la valeur de font-size de sa balise parente.
+Par exemple : 
+le h1 fait 2em par défaut. Si le h1 est enfant de a balise body et qu'on a donné une font-size de 14px à body :
+la taille du h1 sera 2 x 14px = 28px
+
+
+FLEXBOX:
+https://flexboxfroggy.com/#fr
+
+
+DICO CSS du W3C
+https://www.w3.org/TR/css-2010/
+
+INTRO JAVASCRIPT
+le javascript (développement côté client - front-end developement)
+est tout ce qui est traité par le navigateur et affiché au visiteur (User)
+(nous en tant que developeur on est auteur (author en anglais)
+
+Le dev javascript permet principalement de réagir aux actions de l'utilisateur, directement dans le navigateur.
+Ajax : Ansynchronous Javascript And Xml permet les changements sans reload de page (ex chargement des datas (données))
+
+Les qualités requises : la RIGUEUR (primordial dans l'écriture du code, les navigateurs trébuchent sur tout code mal écrit (majuscules, accolades, parenthèses, virgules, lmes espaces, les points))
+Faire très attention et se relire constamment.
+Valider sur le validateur W3C, TEXTER TÔT et SOUVENT.
+Un signe écrit 2 fois au lieu d'une peu inverser totalement la siginfication du code.
+
+L'organisation (rangement des fichiers et dossiers, nomenclature, commentaires, faire du code simple, commenté et lisible)
+La CAPACITE d'ABSTRACTION : Un developpeur quand il fait face à un problème à résouidre droit savoir fractionner celui-ci en morceaux plus digestes et garder une vue globale de de l'ensemble de ce qu'il écrit.
+
+AVANT de commencer à écrire il doit être capable de s'imaginer le résultat du code qu'il va éxécuter.
+
+INTRODUCTION JAVASCRIPT :
+
+LA version actuelle de javascript, JS en abbrégé, ES6
+est une implémentation d'un langage de script appelé EcmaScript (standardisé dans les années 90 par Netscape)
+
+Inventé par Brendan Eich, confondateur du projet Mozilla.
+ES5 est utilisé depuis 2009, on arrive à ES6 aujourd'hui.
+
+Qu'est-ce que javascriopt permet de faire :
+- Définir un action au clic
+- Vérifier des données entrées danss un formulaire
+- Détecter des changements de page et lancer des alertes
+- Stocker des valeurs utiles dans des variables
+- Faire des opérations sur des morceaux de texte (chaines de caractères / string)
+- Permet d'xécuter du code en réponse à certains événements se produisant sur une page web
+- Créer ou déclencher des animations
+- faire des carousels, des menus déroulants, des galeries d'images intercactives, gérer la vidéo et l'audio
+- Créer des jeux, des graphiques 2d et 3d (Datavisualisation), des applicvations complètes fondées sur des bases de données, des applications mobile (online ou offline)
+
+JS est un langage compact en restant souple.
+
+Les developpeurs ont écrit de noù^breux outils sur le coeur de Javascript (core), créant sdes fonctionnalités supplémentaires
+
+Parmi ces outils : 2 catégories d'API : les API navigateurs et les API tierce partie
+API : Application Priogramming Interface, en français Interfaces de Programmation d'applications pour navigateurs.
+Ce sont des blocs de code déjà prêts, qui permettents au développeur de créer plus facilement des programmes (boite à outil déjà développés et testés)
+C'est comme du code en "Kit" pour la programmation. Menuisier vs Ikea
+
+Les APIs navigateur font partie intégrante du navigateur, et peuvent accéder à des données de l'environnement informatique (l'odinateur, le mobile), ou faire d'autres choses complexes.
+Par exemple :
+L'API DOM (Document Object Model) nous permet de manipuler du HTML et du CSS (créer, modifier, supprimer du HTML, appliquer de nouveaux styles à la page de façon dynamique).
+Exemple Créer une popup, charger des nouveaux contenus dans une page, il s'agit de l'action du DOM.
+https://fr.wikipedia.org/wiki/Document_Object_Model
+
+
+API de Géolocalisation  : Permet de récupérer des données géographiques (position en logitude / latitude de notre user)
+https://developer.mozilla.org/fr/docs/Using_geolocation
+
+APIs Canvas et WebGL : permet de créer des graphiques aniùés en 2d (Canvas) et en 3d (Webgl)
+https://developer.mozilla.org/fr/docs/Web/HTML/Canvas
+https://developer.mozilla.org/fr/docs/Web/API/WebGL_API
+
+API Vidéo et Audio  permet de lire de la vidéo et de l'audio sanss plugin
+API WebRTC : peer to peer /  https://developer.mozilla.org/fr/docs/Web/API/WebRTC_API#Connection_setup_and_management
+API Web storage : permet de faire des applications offline (cache manifest)
+    https://developer.mozilla.org/fr/docs/Web/API/Web_Storage_API
+API web workers : muti thread en JS / https://developer.mozilla.org/fr/docs/Utilisation_des_web_workers
+ 
+Compresser de la vidéo dans les formats web : 
+OGG / MP4 / WebM
+https://handbrake.fr/
+
+Exemple Dataviz :
+https://editorializer.relaxnews.com/en/select/add-feed
+
+Les APIs tierces parties : Librairies fournies par des fournisseurs de contenus
+Ne font pas partie par défaut du navigateur, on doit récupérer le code de la librairie (faire un lien vers la librairie) pour pouvoir l'utiliser dans son site.
+
+L'API de Twitter qui qui permet par exemple d'afficher les derniers tweets dans votre page.
+https://developer.twitter.com/
+
+L'API de googlemaps : permet d'afficher des cartes personnalisées. 
+https://cloud.google.com/maps-platform/
+
+Autre API tierces parties : programmableweb.com/category/all/apis
+
+---------------------
+Séparation des concepts :
+Les règles de bases
+- Pas de CSS dans Javascript
+- Pas de balises HTML dans le javascript
+- Pas de CSS dans le HTML (des feuilles de styles internes ou externe oui mais on évite les styles inline
+<p style="color:red;">lorem </p>)
+
+
+https://stackoverflow.com/questions/5755942/how-do-you-auto-format-code-in-visual-studio

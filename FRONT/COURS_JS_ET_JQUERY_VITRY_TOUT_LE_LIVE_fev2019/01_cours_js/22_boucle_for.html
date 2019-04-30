@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Les boucles</h1>
+    <p>Les instructions for et while qui sont deux types de boucles les plus utilisées en js, servent à répéter plusieurs lignes de code</p>
+    <h2>La boucle for</h2>
+    <p>for prend 3 paramètres encadrés dans des parenthèses, suivi entre accolades des instructions à éxécuter autant de fois que la boucle l'indique. Les paramètres sont :</p>
+    <ul>
+        <li>Initialisation : Ici on déclare la variable qui servira de compteur</li>
+        <li>Condition : <strong>Tant que cette condition est vraie</strong> la boucle s'éxécutera</li>
+        <li>Expression finale : Expression qui est éxécutée à chaque fin de boucle</li>
+    </ul>
+
+    <code>
+        for (initialisation; condition; incrémentation){
+            instruction 1;
+            instruction 2;
+        }
+    </code>
+
+
+    <script>
+
+    for(var i=0; i < 5; i++){
+        console.log(i);
+        document.write(i + '<br>');
+    }
+
+    // Dans l'ordre
+    /* 
+     - initialisation d'une variable i égale à 0
+     - Tant que i est inférieur à 5, on éxécute la boucle
+     - à chaque fin de boucle, on incrémente de 1
+
+     Ici, la boucle va s'éxécuter 5 fois, quand la variable i aura comme valeurs 0, 1, 2, 3 et 4
+
+     à 5, la condition sera fausse et la boucle ne sera pas éxécutée.
+    
+    */
+    
+   // Autre exemple de boucle
+
+   tableau = ["chien", "chat", "souris", "lapin", "tortue"];
+
+   // tableau.length nous permettra de récupérer le nombre d'éléments que le tableau contient.
+
+   for( var j=0; j < tableau.length; j++){
+       // affiche chacune des valeurs du tableau
+       document.write(tableau[j] + '<br>');
+   }
+
+// Autre exemple d'utilisation de for : convertir tous les objets d'un tableau en majuscule et les afficher
+
+   var noms = [" fred ", " marc ", " habib ", " samira "];
+   var upper = [];
+
+   for(var k=0, n = noms.length; k<n; k++){
+       upper[k] = noms[k].toUpperCase();
+   }
+   document.write(upper);
+
+
+// dernière boucle for
+    for(var m=0; m<10; m++){
+        alert('m contient la valeur :' + m);
+    }
+
+
+    </script>
+</body>
+</html>

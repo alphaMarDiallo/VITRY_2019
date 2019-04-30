@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        a:link{
+            color: orange;
+            text-decoration: none;
+        }
+        a:visited{
+            color: teal;
+        }
+        a:hover, a:focus{
+            text-decoration: underline;
+            outline: thin solid gold;
+        }
+        a:active{
+            color: crimson;
+        }
+        div{
+            padding: 1rem; /* 16px */
+        }
+        :target{
+            border-left: 4px silver solid;
+        }
+        #chap1:target{
+            background: pink;
+        }
+        #chap2:target{
+            background: lightseagreen;
+        }
+        #chap3:target{
+            background: coral;
+        }
+
+        /* sélecteur d'attribut : se lit tous les éléments qui ont un attribut title */
+        [title]{
+            font-weight: bold;
+        }
+
+        /* sélecteur d'attribut : cibler tous les liens dont l'attribut href commence par http */
+        /* leur mettre une bordure pointillée de 3px violet */
+        
+      [href^=http]{
+          border-bottom: 3px dotted violet;
+          /* 3 propriétés obligatoires sinon la bordure ,ne s'affiche pas :
+          border-bottom:  épaisseur de bordure | style de bordure | couleur de bordure
+          styles : solid = filet
+                   dashed = tirets
+                   dotted = pointillés
+           */
+           
+
+           /* les margin et padding top et bottom ne fonctionnent pas avec les display: inline,
+           si je veux mettre un padding et/ou une margin sur un lien, il faudra transformer son display (ou en block ou en inline-block)*/
+           margin-bottom: 2rem; /* 32px */
+           display: inline-block;
+           padding: .5rem 2rem .5rem .5rem;
+
+           background-color: silver;
+           background-image: url(images/lien_externe.svg);
+           background-repeat: no-repeat;
+           /* background-position: 0 0; en haut à gauche par défaut */
+           /* background-position: 100% 50%; */
+           background-position: right .5rem;
+           background-size: 1.5rem auto; /* largeur de 1.5rem et hauteur homotétique = la hauteur est automatiquement calculée en fonction de la largeur */ 
+
+          /* la même chose en forme d'écriture courte : */
+           background: silver url(images/lien_externe.svg) no-repeat right .5rem;
+          /* couleur de fond | chemin vers l'image | repetition | position x | position y */
+      }
+    
+    </style>
+</head>
+<body>
+  <p> Un lien absolu : vers une page extérieure à mon site, l'attribut href contient TOUJOURS une adresse web complète avec le protocole http.
+    </p>
+    <a href="http://www.apple.com" title="lien vers apple">Lien vers Apple</a>
+    <a href="http://www.transavia.fr" title="lien vers transavia">Lien vers Transavia</a>
+
+    <nav>px
+        <a href="#chap1">Chapitre 1</a>
+        <a href="#chap2">Chapitre 2</a>
+        <a href="#chap3">Chapitre 3</a> 
+    </nav>
+    <section>
+        <div id="chap1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste cum consequatur atque corporis error excepturi consequuntur doloribus, quas, temporibus ut exercitationem iusto minus! Deleniti quia beatae magnam dolore recusandae ullam.</div>
+        <div id="chap2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste cum consequatur atque corporis error excepturi consequuntur doloribus, quas, temporibus ut exercitationem iusto minus! Deleniti quia beatae magnam dolore recusandae ullam.</div>
+        <div id="chap3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste cum consequatur atque corporis error excepturi consequuntur doloribus, quas, temporibus ut exercitationem iusto minus! Deleniti quia beatae magnam dolore recusandae ullam.</div>
+    </section>
+   </body>
+</html> 

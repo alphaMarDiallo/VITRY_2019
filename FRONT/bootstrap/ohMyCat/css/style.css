@@ -1,0 +1,90 @@
+/* REGLAGES GENEREAUX */
+
+.container-fluid {
+    /* padding: 0; */
+    height: 100vh;
+
+}
+
+header {
+    background: brown;
+    height: 17rem;
+    background: url('../img/background.jpg');
+}
+
+nav {
+    background: #061339;
+    color: #2F4073;
+
+}
+
+nav a {
+    color: #fff;
+    font-family: 'Merienda',
+        cursive;
+}
+
+#slider {
+    /* background: green; */
+    /* height: 5rem; */
+    padding: 1rem;
+
+}
+
+#form {
+    /* background: purple; */
+    /* height: 5rem; */
+    padding: 2rem;
+}
+
+#txt {
+    /* background: rosybrown; */
+
+}
+
+#cat {
+    /* background: bisque; */
+
+}
+
+/* #cat img {
+    width: 100%;
+    margin-top: 1.5rem;
+    background: #7885A5;
+} */
+#cat img:hover {
+    background: #061339;
+}
+
+#logo {
+    background: rgb(185, 182, 182);
+}
+
+
+footer {
+    background: #061339;
+    height: 3rem;
+}
+
+footer span {
+    color: white;
+    /* margin-left: 80%; */
+    display: flex;
+    justify-content: end;
+}
+
+/******* CSS PERSO *******/
+/* header */
+header h1 {
+    color: #fff;
+    text-align: center;
+    margin-top: 5.5rem;
+    font-family: 'Merienda',
+        cursive;
+}
+
+h3 {
+    color: #2F4073;
+    font-family: 'Merienda',
+        cursive;
+}

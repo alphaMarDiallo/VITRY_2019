@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- On charge la librairie jquery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+    // Methode traditionnelle pour tester que le dom sont bien chargés
+    /* document.addEventListener("DOMContentLoaded", function(){
+        
+        // tout le code js de la page sera ici
+
+        console.log("DOM chargé");
+    })
+    */
+
+    // 1ere méthode jQuery pour tester que le DOMest bien chargé : 
+
+   /* $(document).ready( function(){
+        // ICI on aura TOUT LES CODE JS et JQUERY de la page ICI
+        // ON EST DANS CE QU'ON APPELLE LE SCOPE JQUERY
+
+        console.log("Le DOM et Jquery sont bien chargés");
+
+
+    }) // FIN DU document ready 
+    */
+
+
+    // 2eme méthode (conseillée) pour charger jquery et le DOM
+    $(function(){
+        // ICI on aura TOUT LES CODE JS et JQUERY de la page ICI
+        // ON EST DANS CE QU'ON APPELLE LE SCOPE JQUERY
+
+        console.log("Le DOM et Jquery sont bien chargés");
+
+    }) // Fin du scope jQuery
+
+    
+    </script>
+
+</body>
+</html>

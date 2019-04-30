@@ -1,0 +1,11 @@
+1 - Créez une base de donnée ELEVE :
+    -> nom VARCHAR
+    -> prenom VARCHAR
+    -> classe VARCHAR
+    -> parents VARCHAR
+    -> telephone INT
+
+2 - Créez un formulaire d'insertion et enregistrer 5 élèves.
+    -> assurez vous que les valeurs pour le champ téléphone soient bien enregistré en INT
+
+3 - Affichez toutes les informations contenu dans la BDD ELEVE sur la même page que le formulaire.

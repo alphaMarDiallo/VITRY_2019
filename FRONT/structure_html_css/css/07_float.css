@@ -1,0 +1,105 @@
+body{
+  margin: 0 auto;
+  background-color:lightgray;
+}
+div{
+  width: 90%;
+  margin: 0 auto;
+  background-color: mistyrose;
+}
+.boite{
+  height: 11vh;
+  width: 18vh;
+  padding: 5vh;
+  background: url("http://kpop-mangas.k.p.pic.centerblog.net/9d016068.jpg")no-repeat;
+  /*background-repeat: no-repeat; */
+  border: 5px double orchid;/*taille, style, couleur de bordure*/
+  margin: 2vh;
+  float: left;/*effet flottant, permet de placer des balises côte à côte alors
+  que selon le flux du web standard les éléments se placent les uns au dessous des
+  autres */
+  transition: margin 0.5s;
+}
+.boite:hover{/*la pseudo class :hover modifie un affichage au survol de la souris.*/
+  margin-top: 10vh;
+}
+.clear{
+  clear: both; /*supprime l'effet flottant*/
+}
+p{
+  background-color: lightblue;
+  /*display: inline;*//*propriété à tester !*/
+}
+p span{/*selectionne les "span" contenus dans les "p"*/
+  background-color: yellow;
+  color:purple;
+}
+/*2eme bloc*/
+.exercice{
+  background-color: yellow;
+  width: 90%;
+  margin: 0 auto;
+}
+.mot{
+  background-color: #76ff03;
+  color: white;
+}
+.box{
+  height: 18vh;
+  width: 18vh;
+  padding: 5vh;
+  background: url("https://ae01.alicdn.com/kf/HTB1u14HIVXXXXb9XFXXq6xXFXXXy/221898529/HTB1u14HIVXXXXb9XFXXq6xXFXXXy.jpg")no-repeat;
+  border: 5px double purple;/*taille, style, couleur de bordure*/
+  margin: 2vh;
+  float: left;
+  border-radius: 50%;
+  transition: margin 0.5s;
+}
+.box:hover{/*la pseudo class :hover modifie un affichage au survol de la souris.*/
+  margin-top: 10vh;
+}
+
+.clear{
+  clear: both;
+}
+/*----------3eme exercices----------*/
+.container{
+  width: 90%;
+  margin: 0 auto;
+  background-color: purple;
+}
+.encore{
+  background-color: #ffab40;
+  color:#4e342e;
+}
+.img:hover{/*la pseudo class :hover modifie un affichage au survol de la souris.*/
+  margin-top: 10vh;
+}
+.imge:hover{/*la pseudo class :hover modifie un affichage au survol de la souris.*/
+  margin-top: 10vh;
+}
+.clear{
+  clear: both;
+}
+.img{
+  height: 18vh;
+  width: 18vh;
+  padding: 5vh;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShpFWih7I4e9bLlREn3PO0Uz-WdkMW9u5MJLeNeWwRCpmZk8oFsA")no-repeat;
+  border: 5px double purple;/*taille, style, couleur de bordure*/
+  margin: 2vh;
+  float: right;
+  border-radius: 30%;
+  transition: margin 0.5s;
+}
+.imge{
+  height: 18vh;
+  width: 18vh;
+  padding: 5vh;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShpFWih7I4e9bLlREn3PO0Uz-WdkMW9u5MJLeNeWwRCpmZk8oFsA")no-repeat;
+  border: 5px double purple;/*taille, style, couleur de bordure*/
+  margin: 2vh;
+  float: left;
+  border-radius: 30%;
+  transition: margin 0.5s;
+}

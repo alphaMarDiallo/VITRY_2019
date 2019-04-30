@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  
+    <h2>Les instructions</h3>
+    <p>Un script js est un fichier contenant des instructions, placées les unes à la suite des autres. Chacune de ces instructions peut être vue comme un ordre donné au moteur javascript, une action que vous souhaitez réaliser, à la manière d'une recette de cuisine</p>
+    <ul>
+        <li>Faire fondre le beurre</li>
+        <li>Mélanger le beurre et la farine</li>
+        <li>Verser le chocolat petit à petit etc.</li>
+    </ul>
+    <p>Les instructions se suivent et sont effectuées les unes à la suite des autres, <strong>Du haut vers le bas</strong> (comme en CSS), le browser parse (analyse)dans l'ordre du flux</p>
+    <h4>Chaque instruction DOIT se termioner par un point virgule ; afin d'indiquer au moteur Javascript que cette instruction est terminée</h4>
+
+<h2>Les fonctions</h2>
+<p>
+    Les fonctions permettent de regrouper une série d'instructions pour pouvoir les réutiliser. Quand on a besoin du code d'une série d'instructions, plutôt que de réécritre à chaque fois toutes les instructions, on appellera une fonction par son nom (faireUnGateau). Cette fonction contient l'ensemble des instructions à éxécuter.
+</p>
+<p>Par exemple la fonction alert est une fonction native (intégrée au navigateur) qui contient en gros les insgtructions suivantes :
+</p>
+<ul>
+    <li>Créer le cadre de la boite de dialogue</li>
+    <li>Positionner le cadre dans la fenêtre</li>
+    <li>Crer un background semi transparent sur toute la page</li>
+    <li>Placer un bouton avec le texte OK et un événement click</li>
+    <li>Créer une zone de texte qui affichera le texte de l'art à présenter au visiteur</li>
+</ul>
+<p>Nous on a juste besoin d'utiliser la fonction alert() en lui donnant un argument exemple alert('Coucou'). 
+La fonction exécutera toutes les instructions à chaque fois. <br>
+On peut utiliser cette fonction alrt quand on veut en la déclenchant avec alert(quelque chose).
+Ce "Quelque chose" est un ARGUMENT attendu par la fonction. 
+</p>
+<code>
+     var maVariable = document.querySelector('h2'); 
+     alert('Coucou !');
+</code>
+<p>Les fonctions querySelector et alert sont disponibles dans le navigateur, ce sont des <strong>méthodes</strong></p>
+
+
+<p>Si vous voyez quelque chose qui resszemble à)une variable et qui est suivie de parenthèses c'est une fonction.</p>
+    
+<p>Les fonctions prennent souvent des arguments - des bouts de données dont elles ont besoin  pour faire leur travail. Les arguments sont placés ENTRE les parenthèses, séparées par des virgules s'il y en a plusieurs.</p>
+
+<p>Par exemple la fonction alert() fait apparaître une popup mais vous devez donneer une chaîne comme argument pour indiquer à la fonction ce que vous sopuhaitez écrire dans la fenêtre.</p>
+
+<p>Nous pouvons écrire nos propres fonctions</p>
+    <script>
+
+        // Attention en absence de point virgule en fin d'instruction, seule la ligne 1 s'exécutera mais pas la suivante (l'alert il va y avoir une erreur s'affiche bien mais pas les 2 alrt du forEach)
+        /*
+        alert("Il va y avoir erreur")
+        [1, 2].forEach(alert);
+*/
+/* Ici comme on a bien mis le point virgule de fin d'instruction, le forEach s'éxécute bien et donc on voit bien 3 alert s'afficher successivbement */ 
+       /*
+
+        alert("Ok ça marche");
+         ["ok", "impec"].forEach(alert);
+
+        */
+        // Deux exemples de fonctions natives
+
+        var maVariable = document.querySelector('h2');
+
+       /*  alert('Coucou !'); */
+
+
+// 1ere façon de déclarer une fonction 
+
+function disBonjour(){
+    document.write("Bonjour ! ");
+}
+
+// pour déclencher la fonction (invoquer la fonction), il faut indiquer au moteur javascript d'éxécuter la fonction car elle ne s'éxécute pas toute seule
+    disBonjour();
+
+    // 2eme façon de déclarer une fonction : assigner une fonction à une variable 
+
+    disHello = function(){
+        document.write('Hello ! ');
+    }
+    // invoquer cette fonction en écrivant un couple de parenthèse après le nom de la focntion (c'est ce couple de parenthèses qui déclenche l'éxécution de la fonction)
+    disHello();
+    // Ici la variable disHello contient une référence à la fonction, on peut dire qu'elle pointe du doigt la fonction elle-même
+    // Une fonction qui n'a pas son propre nom est appelée une fonction anonyme. 
+        
+    // 3eme façon de déclarer une fonction et de l'invoquer
+    function disHola(){
+        return "Hola !";
+    }
+    salutation = disHola();
+    document.write(salutation);
+// ici on vient des stocker dans une variable externe à la fonction, la valeur créée par cette fonction
+
+// ici la fonction addition attend 2 paramètres
+    function addition(num1, num2){
+        resultat = num1 + num2;
+        return resultat; // qui envoie le résultat à l'extérieur de la fonction
+    }
+    // dans l'invocation de la fonction on envoie deux arguments
+    document.write(  addition(2, 6)   );
+
+    </script>
+</body>
+</html>

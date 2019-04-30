@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>On va créer deux fonctionsd appelées a() et b(), et trois variables - x, y et z - deux d'entre elles seront définies à l'intérieur de la fonction, et l'autre sera définie dans la portée globale. 
+        On aura une 3eme fonction qu'on va appekler sortie() qui prend un seul paramètre et et qui le renvoie dans un paragraphe de la page.
+    </p>
+
+    <script>
+    // ETAPE A
+
+// la variable x est la portée globale
+    var x = 1;
+
+// la variable y et z sont dans les portées locales car elles sont dans les fonctions
+    function a(){
+        var y = 2;
+    }
+
+    function b(){
+        var z = 3;
+    }
+    
+    // déclaration de la fonction qui attend un paramètre
+    function sortie(valeur){
+        // crée le noeud (node) p qui est un objet du document
+        var para = document.createElement('p');
+        // Ajoute ce node comme enfant de la balise body
+        document.body.appendChild(para);
+        // créer le node de texte qui est le contenu texte de la balise p avec la méthode textContent. (on pourra aussi utiliser innerHtml)
+        para.textContent = 'La valeur est : ' + valeur;
+    }
+    // invocation de la fonction sortie en lui envoyant l'argument x
+   // sortie(x); // PAS DE PROBLEME ICI :  comme x est dans la portée globale, on y a bien accès et donc le paragraphe créé par la fonction sortie affiche bien la valeur 1 de x. Vous devez normalement voir la valeur de la variable x
+    sortie(z);
+
+    </script>
+</body>
+</html>

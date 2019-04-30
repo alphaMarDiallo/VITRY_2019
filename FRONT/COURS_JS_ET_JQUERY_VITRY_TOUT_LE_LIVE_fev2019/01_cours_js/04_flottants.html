@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 80%;
+            border: 2px solid olivedrab;
+            margin: 0 auto;
+        }
+
+        /* boite à outils des flottants */
+        .flt_l{
+            float: left;
+        }
+       .clear{
+           clear: both;
+           display: table;
+       }
+
+/* la class=clearfix se donne au parent pour qu'il contienne ses flottants (sinon les flottantsd débordent) */ 
+       .clearfix:after{
+           content: 'FAUX FOOTER';
+           clear: both;
+           display: table;
+       }
+
+    
+    </style>
+</head>
+<body>
+    <div class="container clearfix">
+      <img src="images/montagne.jpg" alt="" class="flt_l">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, aperiam ipsa est quod, ab illo placeat nihil consequatur accusamus maiores veniam neque, beatae animi quaerat dolores adipisci autem amet nemo!</p>
+      <strong class="clear">Le cervin</strong>  
+
+      <img src="images/montagne.jpg" alt="" class="flt_l">
+      <!-- <footer class="clear">&copy totodesign</footer>-->
+    </div>
+</body>
+</html>   

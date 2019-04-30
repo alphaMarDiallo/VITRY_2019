@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- RAPPEL :
+        les 3 balises meta ci-dessus DOIVENT venir en 1er dans le <head>
+        toutes les autres éléments contenu dans <head> viennent APRES
+        -->
+    <title>Base Bootstrap 4</title>
+
+    <!-- CSS Bootstrap en CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+
+    <!-- CSS personnel TOUJOURS APRES celui du framework -->
+    <link rel="stylesheet" href="css/03_fonctionnement-de-BS.css">
+</head>
+
+<body>
+    <!-- Contenu HTML -->
+
+
+    <!--
+    Bootstrap
+
+        BS est un framework CSS, il comporte beaucoup de possibilités. Ici, nous verrons ensemble ses principes de
+        fonctionnement et les bases de son utilisation.
+        A chacun d'aller explorer en détails ce qu'il est possible de faire avec BS.
+
+        BS permet d'avoir un site immédiatement responsive
+        il faut savoir que les sites internet non responsive ne sont plus référencés (référencement naturel) depuis mai 2015
+
+        BS part du principe que chaque élément html de type bloc a 12 colonnes
+    -->
+
+    <div class="container">
+        <h2>Les containers ou blocs principaux</h2>
+    </div>
+
+    <div class="container-fluid c3">
+        <p>.container-fluid</p>
+    </div>
+    <div class="container c4">
+        <p>.container</p>
+    </div>
+<!--
+        la classe .container-fluid de BS va occuper 100% de la largeur de l'écran
+        si je l'utilise imbriquée dans un autre élément de BS bien entendu ce bloc occupera 100% de la
+        largeur disponible (qui est définie par l'élément parent)
+
+        la classe .container de BS (bootstrap) permet de travailler sur une page occupant environ 70% de la
+        largeur de l'écran et dont le contenu est centré (margin: 0 auto)
+
+        par défaut si je travaille sans déclarer de div avec une classe .container ou .container-fluid l'affichage
+        se fait sur 100% de la largeur
+        -->
+
+  
+
+
+    
+    <!-- /.container -->
+
+    <!-- jQuery pour Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

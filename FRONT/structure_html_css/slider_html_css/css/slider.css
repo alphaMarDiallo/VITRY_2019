@@ -1,0 +1,97 @@
+
+.conteneur{
+    width:56%;
+    border: 2px solid black;
+    align-content: center;
+    margin:20%;
+    margin-top: 5%;
+    background: darkgray;
+} 
+
+nav {
+    height: 40px;
+    background: black;
+    text-align: center;
+     
+} 
+
+.text{
+    color: red;
+    text-align: right;
+}
+a{
+list-style:none;
+ margin-left:0;
+padding-left:0;
+color: white;
+font-size: 20px;
+text-decoration: none;
+  /* font-weight: 500; */
+  font-weight: 250;
+  padding: 6px 9px;
+  /* margin: 0px 2px; */
+}
+#slider{
+  height: 200px;
+  background: #33313B;
+  /* position: relative;   */
+  width: 300%;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 0;
+  /* text-align: left; */
+  width: 100%; 
+  max-width: 100%; 
+  overflow: hidden;
+   
+}
+#slider figure img { 
+    width: 22%; 
+    height: auto; 
+    float: left;
+    padding-right: 25px;
+    padding-top: 30px;
+ }
+ #slider figure {
+  position: relative; 
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  text-align: left;
+  padding-left: 23px;
+}
+
+.A{
+    background:white;
+    width: 58%;
+    float: left;
+    border: 10px solid darkgray;
+
+}
+.B{
+    background: black;
+    width: 40%;
+    float: right;
+    color: white;
+    
+}
+header{
+    background: white;
+}
+.B img{
+    margin-top: 20px;
+    padding-left:9%;
+}
+form{
+    float: right;
+}
+h2{
+    background: red;
+    margin-right: 10%;
+    margin-left: 50%;
+    font-size: 25px;
+}
+.title{
+    font-size: 30px;
+}

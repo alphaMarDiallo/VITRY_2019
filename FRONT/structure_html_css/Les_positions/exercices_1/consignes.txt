@@ -1,0 +1,7 @@
+faire  un index.html (float)
+faire un index.css(float)
+faire 11 carrés de meme dimension et les alligner
+1ere ligne => 2 carrés, 2eme ligne 4 carrés; 3eme ligne=>1 carré 
+et derniere ligne=>4 carrés
+Mettre une image de fond et faire un encadré mettre un titre 
+de niveau 1 et faire une tranformation des carrés en cercle.

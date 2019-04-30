@@ -1,0 +1,6 @@
+{
+    "autoimport.autoComplete": false,
+    "autoimport.useSemiColon": false,
+    "html.format.indentHandlebars": true,
+    "html.format.indentInnerHtml": true
+}

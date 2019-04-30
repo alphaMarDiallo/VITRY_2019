@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        
+    .listeFruits{
+        transform: scale(0); /* ICI ON CACHE LA LISTE AU CHARGEMENT DE LA PAGE, on va l'afficher / et la cacher en cliquant sur le bouton */
+        transform-origin: 0 0;
+        background-color: firebrick;
+        transition: .5s;
+
+        /* pour placer la liste AYU DESSUS de la boite bleue */ 
+        position: absolute; 
+        
+        left: 20px;
+        width: 60%;
+    }
+    .affiche{
+        transform: scale(1);
+    } 
+    #boiteBleue{
+        width: 600px;
+        height: 600px;
+        background: navy;
+    }
+    </style>
+</head>
+<body>
+    <!-- 
+        1/ Dans le HTML : AJOUTER UN DIV QUI A L'ID boiteBleue
+        2/ Mettre les styles css pour décorer cette boite : largeur, hauteur, couleur de fond
+    -->
+
+<button class="btn">Affiche et masque la liste</button>
+<ul class="listeFruits">
+    <li>Fraise</li>
+    <li>Framboise</li>
+    <li>>Cerise</li>
+    <li>Groseilles</li>
+</ul>
+<div id="boiteBleue">Contenu de la boite bleue</div>
+
+
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    $(function(){
+        console.log('jquery chargé');
+        
+        // ici on ajoute un événement click sur l'élément qui a la class .btn et on éxécute une fonction anonyme
+        $('.btn').on('click', function(){
+
+            // on ajoute un toogleClass pour ajouter et supprimer la class affiche sur l'objet qui a la class .listeFruits
+            $('.listeFruits').toggleClass('affiche');
+
+        })
+
+    }) // fin du scope jquery
+</script>
+</body>
+</html>

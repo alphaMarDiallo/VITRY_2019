@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .maDiv{
+        background: burlywood;
+        padding: 1rem;
+        width: 300px;
+        height: 200px;
+        /* overflow: hidden; cache le contenu qui déborde du div 
+
+        overflow: scroll; cache le contenu qui déborde du div mais ajoute des barres d'ascenceur verticales et horizontales
+        */
+        overflow: auto; /*  affiche l'ascenseur là ou il y en a besoin */
+        
+    }
+    </style>
+</head>
+<body>
+    <section>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea maiores eaque possimus libero quia, labore itaque eum consequuntur, quidem doloribus pariatur cumque sequi voluptatem molestiae nihil dignissimos ab assumenda neque?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea maiores eaque possimus libero quia, labore itaque eum consequuntur, quidem doloribus pariatur cumque sequi voluptatem molestiae nihil dignissimos ab assumenda neque?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea maiores eaque possimus libero quia, labore itaque eum consequuntur, quidem doloribus pariatur cumque sequi voluptatem molestiae nihil dignissimos ab assumenda neque?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea maiores eaque possimus libero quia, labore itaque eum consequuntur, quidem doloribus pariatur cumque sequi voluptatem molestiae nihil dignissimos ab assumenda neque?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea maiores eaque possimus libero quia, labore itaque eum consequuntur, quidem doloribus pariatur cumque sequi voluptatem molestiae nihil dignissimos ab assumenda neque?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea maiores eaque possimus libero quia, labore itaque eum consequuntur, quidem doloribus pariatur cumque sequi voluptatem molestiae nihil dignissimos ab assumenda neque?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea maiores eaque possimus libero quia, labore itaque eum consequuntur, quidem doloribus pariatur cumque sequi voluptatem molestiae nihil dignissimos ab assumenda neque?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea maiores eaque possimus libero quia, labore itaque eum consequuntur, quidem doloribus pariatur cumque sequi voluptatem molestiae nihil dignissimos ab assumenda neque?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea maiores eaque possimus libero quia, labore itaque eum consequuntur, quidem doloribus pariatur cumque sequi voluptatem molestiae nihil dignissimos ab assumenda neque?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea maiores eaque possimus libero quia, labore itaque eum consequuntur, quidem doloribus pariatur cumque sequi voluptatem molestiae nihil dignissimos ab assumenda neque?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea maiores eaque possimus libero quia, labore itaque eum consequuntur, quidem doloribus pariatur cumque sequi voluptatem molestiae nihil dignissimos ab assumenda neque?</p>
+
+        <div class="maDiv">
+            <h2>ma Div</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, ut iusto! Accusamus optio atque eum. Harum voluptate cupiditate, minus dolorem totam architecto hic sequi vero nostrum eveniet, accusantium aliquam. Assumenda.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, ut iusto! Accusamus optio atque eum. Harum voluptate cupiditate, minus dolorem totam architecto hic sequi vero nostrum eveniet, accusantium aliquam. Assumenda.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, ut iusto! Accusamus optio atque eum. Harum voluptate cupiditate, minus dolorem totam architecto hic sequi vero nostrum eveniet, accusantium aliquam. Assumenda.</p>
+
+
+        </div>
+    </section>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+    $(function(){
+        console.log('jquery chargé');
+
+        $(window).scroll(function(){
+            console.log('utilisation de la roulette dans le document');
+            // récupérer les dimensions de a fenêtre
+
+            var largeur = $(window).width();
+            console.log(largeur);
+
+            var hauteur = $(window).height();
+            console.log(hauteur);
+
+        }) // fin du scroll de la fenêtre
+
+        $('.maDiv').scroll(function(){
+            console.log('utilisation de la roulette dans la div .maDiv');
+        })
+
+
+    }) // fin du scope jquery
+    
+    </script>
+</body>
+</html>

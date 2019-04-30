@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* sélecteur universel, se lit toutes les balises
+        le box-sizing:border-box; permet de donner des paddings et des border sans augmenter la taille calculée des boites, le width représente la taille TOTALE de TOUTES les boites */ 
+
+        *{
+            box-sizing: border-box;
+        }
+
+            .container{
+                width: 80%;
+                border: 2px solid olivedrab;
+                margin: 0 auto;
+            }
+
+            .container figure{
+                border: 2px orange solid;
+                width: 25%;
+                margin: 0;
+                float: left;
+                padding: .5rem;
+            }
+            figure img{
+                max-width: 100%;
+            }
+    
+            /* boite à outils des flottants */
+            .flt_l{
+                float: left;
+            }
+           .clear{
+               clear: both;
+               display: table;
+           }
+    
+    /* la class=clearfix se donne au parent pour qu'il contienne ses flottants (sinon les flottantsd débordent) */ 
+           .clearfix:after{
+               content: '';
+               clear: both;
+               display: table;
+           }
+
+
+            /* Les media queries */
+
+            /* pour tous les écrans plus petits que 640px, on va mettere 2 figures par ligne */
+
+            @media (max-width:640px){
+
+                body{
+                    background: hotpink;
+                }
+                .container{
+                    width: 100%;
+                }
+                .container figure{
+                    width: 50%;
+                }
+
+            }
+
+            /* pour tous les écrans plus petits que 480px, on va mettere 1 figure par ligne */
+
+            @media (max-width: 480px){
+
+                body{
+                    background: teal;
+                }
+
+                .container figure{
+                    width: 100%;
+                }
+
+            }
+
+
+
+
+        
+        </style>
+</head>
+<body>
+
+    <div class="container clearfix">
+        
+        <figure>
+            <img src="images/montagne.jpg" alt="">
+            <figcaption>Le Cervin</figcaption> 
+        </figure>
+        <figure>
+            <img src="images/montagne.jpg" alt="">
+            <figcaption>Le Cervin</figcaption> 
+        </figure>
+        <figure>
+            <img src="images/montagne.jpg" alt="">
+            <figcaption>Le Cervin</figcaption> 
+        </figure>
+        <figure>
+            <img src="images/montagne.jpg" alt="">
+            <figcaption>Le Cervin</figcaption> 
+        </figure>
+        <figure>
+            <img src="images/montagne.jpg" alt="">
+            <figcaption>Le Cervin</figcaption> 
+        </figure>
+        <figure>
+            <img src="images/montagne.jpg" alt="">
+            <figcaption>Le Cervin</figcaption> 
+        </figure>
+        <figure>
+            <img src="images/montagne.jpg" alt="">
+            <figcaption>Le Cervin</figcaption> 
+        </figure>
+        <figure>
+            <img src="images/montagne.jpg" alt="">
+            <figcaption>Le Cervin</figcaption> 
+        </figure>
+        <figure>
+            <img src="images/montagne.jpg" alt="">
+            <figcaption>Le Cervin</figcaption> 
+        </figure>
+        <figure>
+            <img src="images/montagne.jpg" alt="">
+            <figcaption>Le Cervin</figcaption> 
+        </figure>
+        <figure>
+            <img src="images/montagne.jpg" alt="">
+            <figcaption>Le Cervin</figcaption> 
+        </figure>
+        <figure>
+            <img src="images/montagne.jpg" alt="">
+            <figcaption>Le Cervin</figcaption> 
+        </figure>
+
+        
+
+
+    </div>
+    
+</body>
+</html>

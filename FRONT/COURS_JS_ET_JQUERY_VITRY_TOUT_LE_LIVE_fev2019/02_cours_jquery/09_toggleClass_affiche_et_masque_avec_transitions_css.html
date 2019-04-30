@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .boite{
+            width: 600px;
+            height: 600px;
+            background: navy;
+        }
+    .listeFruits{
+        transform: scale(0); /* ICI ON CACHE LA LISTE AU CHARGEMENT DE LA PAGE, on va l'afficher / et la cacher en cliquant sur le bouton */
+        transform-origin: 0 0;
+        background-color: firebrick;
+        transition: .5s;
+        position: absolute;
+        top: 20px; 
+        left: 20px;
+        width: 800px;
+    }
+    .affiche{
+        transform: scale(1);
+    } 
+    </style>
+</head>
+<body>
+    <!-- 
+        1/ Dans le HTML : Ajouter une balise button et sa class="btn" 
+        2/ charger jquery et afficher jquery chargé en console
+        3/ Créer la fonction afficheMasque() qui sera exécutée au clic sur .btn
+        cette fonction fait un toggleClass avec la class affiche sur la listeFruit 
+    -->
+<button class="btn">Affiche et masque la liste</button>
+<ul class="listeFruits">
+    <li>Fraise</li>
+    <li>Framboise</li>
+    <li>>Cerise</li>
+    <li>Groseilles</li>
+</ul>
+<div class="boite">contenu de boite</div>
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    $(function(){
+        console.log('jquery chargé');
+        
+        // ici on ajoute un événement click sur l'élément qui a la class .btn et on éxécute une fonction anonyme
+        $('.btn').on('click', function(){
+
+            // on ajoute un toogleClass pour ajouter et supprimer la class affiche sur l'objet qui a la class .listeFruits
+            $('.listeFruits').toggleClass('affiche');
+
+        })
+
+    }) // fin du scope jquery
+</script>
+</body>
+</html>

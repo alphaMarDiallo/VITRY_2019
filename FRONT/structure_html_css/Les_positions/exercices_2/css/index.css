@@ -1,0 +1,20 @@
+#conteneur{
+    width: 960px; /*valeurs habituelles pour les sites car facilement divisible pour organiser les blocs*/
+    background:url("http://palina.p.a.pic.centerblog.net/6o2rrdae.jpg");
+    margin: 0 auto;/*centrage automatique = pas de marge en haut et en bas mais une marge à gauche et à droite sera la même qu'elle que soit la taille de l'écran*/
+    padding: 30px;/*marge intérieur*/
+    box-sizing: border-box;/*permet de verrouiller le conteneur sur 960px sans que le padding vienne agrandir le bloc*/
+    border: 7px solid #774e26;
+}
+.a, 
+.b{
+    color: #7d7d7d;
+    background: #fed9ca;
+    height: 150px;
+    width: 450px;
+    border:2px solid #c5c5c5;
+    margin: 10px 10px;
+    display: inline-block; /*affichage de deux blocs alignés, INLINE seul crée 2 cadres qui entourent uniquement le contenu comme le surlignage, BLOCK seul affiche 2 blocs l'un sur l'autre*/
+    vertical-align: middle;/*centrer verticalement les 2 blocks a et b*/
+    /*a et b ayant les mêmes propriétés on les rassemble*/
+}

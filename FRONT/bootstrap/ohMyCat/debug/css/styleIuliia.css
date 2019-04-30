@@ -1,0 +1,49 @@
+.navbar {
+    background: rgb(9, 0, 88);
+    height: 5vh;
+    line-height: 5vh;
+    /* padding: 0; */
+}
+
+#header_main {
+    background: rgb(94, 69, 122);
+    height: 13vh;
+    background: url(../img/background.jpg) repeat;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    line-height: 13vh;
+}
+
+.slide {
+    height: 50vh;
+}
+
+.form {
+    height: 40vh;
+}
+
+.txt {
+    height: 10vh;
+}
+
+.chat {
+    height: 20vh;
+    /* background: url(../img/tete-chat.png) no-repeat; */
+}
+
+.chat img {
+    height: 20vh;
+}
+
+footer {
+    background: rgb(9, 0, 88);
+    height: 3vh;
+}
+
+#logo {
+    background-color: rgb(182, 182, 182);
+}

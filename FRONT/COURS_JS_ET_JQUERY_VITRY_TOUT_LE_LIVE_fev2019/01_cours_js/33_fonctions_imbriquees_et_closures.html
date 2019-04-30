@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ls fonctions imbriquées et closures</h1>
+    <p>Il faut garder à l'esprit qu'on peut appeler une fonction de n'importe où, même à l'intérieur d'une autre fonction. <br>
+    Les fonctions imbiquées sont souvent utilisées comme un moyen de garder du code bien organisé. Une grande fonction complexe est plus facile à comprendre si vous la divisez en plusieurs sous-fonctions.
+    </p>
+
+    <script>
+        // ETAPE A : on va faire une meta fonction qui imbrique plusieurs sous fonctions
+
+        function maMetaFonction(){
+            var maVariable = 1;
+            sousFonction1();
+            sousFonction2();
+            sousFonction3();
+        } // FIN DE LA metaFonction
+
+        function sousFonction1(){
+            document.write(maVariable);
+        }
+
+        function sousFonction2() {
+            document.write(maVariable);
+        }
+
+        function sousFonction3() {
+            document.write(maVariable);
+        }
+        
+        // ici on déclenche la metaFonction
+        maMetaFonction();
+
+        // Il faut s'assurer que les valeurs de variable utilisées dans la fonction ont une portée correcte. L'exemple ci-dessus donne une Reference error maVariable is not defined. En effet, même si la valeur de maVariable est est définie dans la même portée que les appels de fonction, elle n'est pas définie dans les déclarations de fonctions (le code réel qui est exécuté lorsque les fonctions sont appelées).
+        // Pour que cela fonctionne, il faut passer la valeur dans la fonction en tant que paramètre. On va faire ça dans l'exo suivant 33b_closure.html
+    
+    </script>
+</body>
+</html>

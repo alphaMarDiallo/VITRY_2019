@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%; /* base 10px */
+        }
+        html, body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        body, input, textarea{
+            font: 1.3rem/1.5 arial, helvetica, sans-serif;
+        }
+        #monForm{
+            width: 60%;
+            background: blanchedalmond;
+            padding: 2rem;
+            margin: 0 auto;
+        }
+        #monForm fieldset{ 
+            border: 1px dashed silver;
+            border-radius: 1rem;
+            box-shadow: 0 0 3px rgba(0, 0, 0, .25);
+        }   
+        #monForm fieldset legend{ 
+            background: blanchedalmond;
+            padding: 1rem;
+        }
+        #monForm input,  #monForm textarea{
+            width: 100%;
+            margin: 5px 0;
+        }
+         #monForm p{
+             margin-top: .5rem;
+             margin-bottom: 0;
+         }
+         .feedback{
+             width: 70%;
+             border: 1px silver solid;
+             padding: 2rem;
+             border-radius: 1rem;
+             margin: 0;
+             box-shadow: 0 0 10px rgba(0,0,0, .25);
+             
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             transform: translate(-50%, -50%);
+         }
+
+    </style>
+</head>
+<body>
+
+    <form action="traitement.php" method="GET" id="monForm">
+        <fieldset>
+            <legend>Mes infos perso</legend>
+
+            <p>
+            <label for="nomComplet">Nom et Prénom</label>
+            <input type="text" id="nomComplet" placeholder="Nom et Prénom">
+            </p>
+
+            <!-- 
+              1/ créer un input de type email avec l'id email
+              2/ créer un input de type tel avec l'id tel
+              3/ créer un input de type text avec l'id sujet
+              3/ créer un textarea avec l'id message
+              4/ Créer un bouton de submit avec la valeur 'Envoyer mon message'
+
+              5/ Avec jquery : Afficher à l'utilisateur un récapitulatif contenant toutes les valeurs du formulaire (des p affichés les uns après les autres  dans body)
+            -->
+            <p>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email">
+            </p>
+
+            <p>
+                <label for="tel">Tel</label>
+                <input type="tel" id="tel" placeholder="Tel">
+            </p>
+
+            <p>
+                <label for="sujet">Sujet</label>
+                <input type="text" id="sujet" placeholder="Sujet">
+            </p>
+
+            <p>
+                <label for="message">Votre Message</label>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message..."></textarea>
+            </p>
+
+
+            <input type="submit" value="Envoyer mon message">
+
+           
+        </fieldset>
+    </form>
+    
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            console.log('jquery chargé');
+            
+            // 1/ Ecouter l'événement submit du formulaire
+            $('#monForm').on('submit', function(ev){
+                // stopper la redirection du formulaire
+                ev.preventDefault();
+                
+                // récuperer les infos dans des variables
+
+                var nomComplet = $('#nomComplet').val();
+                var email = $('#email').val();
+                var sujet = $('#sujet').val();
+                var tel = $('#tel').val();
+                var message = $('#message').val();
+
+                $(this).replaceWith(
+                    // attention on a des apostrophes inversées altGr + 7
+
+                    `
+                        <p class="feedback">
+                            Bonjour <strong> ${nomComplet} </strong>
+                            <em>${email}</em><br>
+                            Vous nous avez contacté au sujet de 
+                            <strong>${sujet}</strong>
+                            Nous vous recontacterons prochainement au 
+                            <strong>${tel}</strong>
+                            <br> Voici votre message <br>
+                            ${message}
+                        </p>
+                    `
+                )
+
+
+            }) // fin du on submit
+
+        }) // fin du scope jquery
+    </script>
+</body>
+</html>

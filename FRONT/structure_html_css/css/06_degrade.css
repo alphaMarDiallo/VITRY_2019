@@ -1,0 +1,24 @@
+.contenu{
+  background: linear-gradient(to left, #40a497,#6840a4);/*dégradé qu démarre avec la première couleur
+  et finit avec la seconde de haut ven bas par défaut, mais ici on a ajouté TO LEFT qui effectue de GAUCHE
+  à DROITE*/
+  width: 45em; /*largeur*/
+  height: 45em; /*la hauteur*/
+  margin: 0 auto;/*pas de marge(valeur 0) en haut et en bas - la valeur auto laisse au navigateur centrer
+  l'élément*/
+  border-radius: 50%; /*la propriété BORDER-RADIUS permet d'arrondir plus ou moins les angles.*/
+}
+.contenu1{
+background: linear-gradient(to Right, #eeff41,#4a148c,#ccff90);
+width: 50em;
+height: 50em;
+margin: 0 auto;
+border-radius: 20%;
+}
+.contenu2{
+  background: linear-gradient(#ffecb3,#ffca28,#ff8f00,#ff5722);
+  width: 60em;
+  height: 40em;
+  border-radius: 60em / 40em;
+  margin: 0 auto;
+}

@@ -1,0 +1,12 @@
+https://fr.wikipedia.org/wiki/Navigateur_web#/media/File:Timeline_of_web_browsers.svg
+https://www.w3.org/TR/css-backgrounds-3/#the-border-radius
+
+coompariatifs navigateurs
+https://caniuse.com/
+https://www.quirksmode.org/css/
+
+fr.wikipedia.org/wiki/Couleur_du_Web
+
+Taille et police par défaut d'une page HTML :
+Times, times New Roman, serif;
+16px

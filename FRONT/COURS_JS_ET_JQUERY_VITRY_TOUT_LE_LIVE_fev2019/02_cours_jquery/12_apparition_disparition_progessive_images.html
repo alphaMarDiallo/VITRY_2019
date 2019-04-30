@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img{
+            width: 320px;
+        }
+    </style>
+</head>
+<body>
+    <button class="btnDisparait">Faire disparaitre les images</button>
+    <button class="btnApparait">Faire apparaitre les images</button>
+
+    <p>
+        <img src="images/photo1.jpg" alt="">
+        <img src="images/photo2.jpg" alt="">
+        <img src="images/photo3.jpg" alt="">
+        <img src="images/photo4.jpg" alt="">
+    </p>
+
+    <script src='js/jquery-3.3.1.min.js'></script>
+   <script>
+   $(function(){
+       console.log('jquery chargé');
+
+       $('.btnDisparait').click(function(){
+           
+
+           $('img').first().hide('slow', function hideNextOne(){
+               $(this).next('img').hide('slow', hideNextOne);
+           })
+
+       }) // fin du click sur .btnDisparait
+
+
+       $('.btnApparait').click(function () {
+
+           $('img').first().show('slow', function showNextOne() {
+               $(this).next('img').show('slow', showNextOne);
+           })
+
+       }) // fin du click sur .btnApparait
+
+   }) // fin du scope
+   </script>
+            
+</body>
+</html>

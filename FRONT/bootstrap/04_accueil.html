@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Base Bootstrap 4</title>
+
+    <!-- CSS Bootstrap en local -->
+    <link rel="stylesheet" href="lib/bootstrap-4.1.1-dist/css/bootstrap.css">
+    <!-- une police de Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800">
+
+    <!-- Font-Awesome est une police d'icônes -->
+    <!-- https://fontawesome.com/get-started -->
+    <!-- <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+
+    <!-- CSS personnel TOUJOURS APRES celui du framework -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- @FORMATEUR -->
+<!-- * BS = Bootstrap -->
+<!-- 1. débuter avec le container et leur faire tester avec la console la taille de l'élément et son responsive -->
+<!-- 2. ajouter la nav SANS le burger d'abord et ENSUITE le rajouter en leur faisant tester avec la taille du navigateur -->
+<!-- 3. après la nav on poursuit avec une mise en avant appelée JUMBOTRON sur BS -->
+<!-- 4. ajout d'une section de la page divisée en 3 colonnes, dans lesquelles on va ajouter des "cards" de BS -->
+<!-- /!\ sur la partie 4 plusieurs parties de code sont à faire en 2 fois : on montre un élément de BS puis ensuite on
+    rajoute des classes qui vont affiner la mise en forme et/ou le comportement responsive -->
+<!-- 5. dernière section de cette page : travail avec les classes jouant sur la typo avec BS -->
+<!-- 6. navigation verticale -->
+
+<body>
+    <!-- Contenu HTML -->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">Super Mila</a>
+
+            <!-- Partie pour la navigation sur mobile avec un bouton : le burger -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- fin Burger -->
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">A propos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">
+                            Boutique
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Thés</a>
+                            <a class="dropdown-item" href="#">Cafés</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Matériel</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Jumbotron -->
+        <div class="jumbotron">
+            <h1 class="display-4">Simple. Elegant. Awesome.</h1>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. </p>
+
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button">Voir plus</a>
+            </p>
+        </div>
+        <!-- Fin Jumbotron -->
+
+        <!-- section de 3 colonnes -->
+        <!-- les colonnes avec la classe .col sont automatiquement de la même largeur -->
+        <!-- si on voulait par exemple avoir une colonne plus grande que les autres il faut ajouter un chiffre .col-6 par exemple -->
+        <!-- montrer cela puis effacer -->
+        <div class="row">
+            <div class="col">
+                <!-- 
+                    dans un second temps on revient sur cette ligne pour la 1ère des 3 cartes 
+                    cf. la ligne 94 en commentaires qui sera à changer pour la 1ère des 3 cartes en modifiant la ligne 84
+
+                en effet avec la classe .col cette zone n'est pas responsive
+                donc ensuite on rajoute la classe .col-sm-12 à chaque carte pour indiquer que sur un petit écran 
+                la carte occupera toute la largeur de la grille qui fait 12 colonnes dans BS
+                La classe .col-md-4 indique que sur écran de taille moyenne et plus grand chaque carte occupe 1/3 de l'espace
+                -->
+                <!-- <div class="col-sm-12 col-md-4"> -->
+                <div class="card">
+                    <!-- 
+                        cette carte une fois que la modification précédente est effectuée occupe 100% de la largeur de la grille
+                    nous allons donc rajouter une marge avec les classes de BS sur la carte en modifiant la ligne 95 
+                    cf. ligne 115 en commantaire
+                    
+                    Avec BS on peut ajouter des marges (extérieures) avec m et des paddings (intérieures) avec p
+                    Après le m ou le p on peut ajouter soit :
+                        - t (top - haut)
+                        - b (bottom - bas)
+                        - l (left - gauche)
+                        - r (right - droite)
+                        - x (droite & gauche)
+                        - y (haut & bas)
+                        - ou rien pour les 4 côtés identiques
+                    Après un tiret (-) on indique une taille de 0 à 5 (5 étant la plus large)                        
+                    
+                    Ici on va ajouter une marge en bas de 4 pour avoir un espace entre la 1ère carte et les 2 suivantes
+                    -->
+                    <!-- <div class="card mb-4"> -->
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Titre de la Carte</h5>
+                        <p class="card-text">Petite phrase d'accroche pour la Carte</p>
+                        <a href="#" class="card-link">Un autre lien</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Titre de la Carte</h5>
+                        <p class="card-text">Petite phrase d'accroche pour la Carte</p>
+                        <a href="#" class="card-link">Un autre lien</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Titre de la Carte</h5>
+                        <p class="card-text">Petite phrase d'accroche pour la Carte</p>
+                        <a href="#" class="card-link">Un autre lien</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin section de 3 colonnes -->
+
+        <!-- section de 2 blocs dont une navigation secondaire latérale à droite -->
+        <div class="row mt-sm-4 mt-md-4">
+            <!-- la classe mt souvenez-vous... c'est pour margin top et un chiffre de 0 à 5 -->
+            <div class="col-sm-12 col-md-8">
+                <!-- si on souhaite que sur mobile le texte de toute cette div soit centré on rajouterait 2 classes :
+                     .text-sm-center et .text-md-left cf. ligne 154 commentée
+                -->
+                <!-- <div class="col-sm-12 col-md-8 text-sm-center text-md-left"> -->
+
+                <h3>Un titre important</h3>
+                <p class="lead">On peut ajouter un sous-titre, qui est plus large mais en gris en utilisant la classe
+                    .lead de Bootstrap.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur.</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+
+            <div class="col-sm-12 col-md-4">
+                <h3 class="mb-4">Menu Secondaire</h3>
+
+                <ul class="nav flex-column nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Activé</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Lien</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Lien</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Désactivé</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Fin section de 2 blocs dont une navigation secondaire latérale à droite -->
+
+    </div><!-- /.container -->
+
+    <!-- jQuery pour Bootstrap TOUJOURS AVANT le JavaScript de Bootstrap -->
+    <script src="lib/js/jquery-3.3.1.min.js"></script>
+    <script src="lib/js/popper.js"></script>
+    <script src="lib/bootstrap-4.1.1-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
