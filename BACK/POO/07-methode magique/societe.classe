@@ -1,0 +1,17 @@
+<?php
+
+
+Class Societe{
+
+    public $adress;
+    public $ville;
+    public $cp;
+}
+
+$societe = new Societe;
+$societe->villes="Paris";
+
+echo '<prev>';
+print_r($societe);
+echo '</prev>';
+
