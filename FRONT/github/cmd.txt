@@ -1,0 +1,49 @@
+
+Docu : 
+
+Docs/partages/blob/master/supports/github_desktop_gitkraken.md
+
+https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html
+
+--- cmd général ---
+
+* cd -> (change directory) naviguer entre les differents dossiers
+
+* pwd -> (present writing repertory) vérifier le répertoir en cours d'utilisation
+
+* mkdir ->création d'un dossier
+
+* touch -> création d'un fichier
+
+* ls -> (list subfiles) voir les dossiers cachés
+
+* ls -a -> voir les sous dossiers cachés
+
+--- cmd git ---
+
+* git config --global user.name "Sam Smith"
+  git config --global user.email sam@example.com
+
+* git init -> initialise le tracking d'un dossier (il faut se positionner dans le dossier que l'on souhaite tracker)
+
+* git status -> vérifier l'étatdes dossiers et fichiers trackés avec git
+
+* git remote add origin + url -> cloner un dossier créer en local vers le cloud
+    -> git commit -m "lorem ipsum"
+    -> git push origin master
+
+* git clone -> cloner un dossier de github vers le disk local 
+
+    --- branch ---
+
+* git branch nom de la branch -> création de la branch
+
+* git checkout nom de la branch -> on se positionne sur la nouvelle branch
+    -> git commit -am -> git add et commit fait en une seul fois (fichier déjà tracké)
+    -> git push origin nom de la branch
+
+* git checkout master -> on se repositionne sur la branch master
+    -> git merge nom de la branch -> pour récupérer le travail de la branch debug
+    
+
+

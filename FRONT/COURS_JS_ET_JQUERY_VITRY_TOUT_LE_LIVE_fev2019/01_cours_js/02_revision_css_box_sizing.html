@@ -1,80 +1,86 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-    html{
-        /* modifier la taille de type pour avoir une taille de 10px */
-        font-size: 62.5%; /* = 10pixels /* en % à cause de bugs sur IE */
-    }
+        html {
+            /* modifier la taille de type pour avoir une taille de 10px */
+            font-size: 62.5%;
+            /* = 10pixels /* en % à cause de bugs sur IE */
+        }
 
-    body{
-        margin: 0;
-        font-size: 1.4rem; /* = 14pixels */
-        font-family: arial, helvetica, sans-serif;
-    }
+        body {
+            margin: 0;
+            font-size: 1.4rem;
+            /* = 14pixels */
+            font-family: arial, helvetica, sans-serif;
+        }
 
-    h1{
-        border: 2px crimson solid;
-        margin-bottom: 0;
-        padding: 1rem; /* 10px*/
-        width: 300px;
+        h1 {
+            border: 2px crimson solid;
+            margin-bottom: 0;
+            padding: 1rem;
+            /* 10px*/
+            width: 300px;
 
-        /* la taille calculée de la boite du h1 :
+            /* la taille calculée de la boite du h1 :
       border-left 2px + padding-left 10px +  width 300px + padding-right 10px + border-right 2px = TOTAL 324px */
-    }
-    p{
-        border: 2px gold solid;
-        font-size: 1.3rem; /* 1.3 x 10px = 13px */
-        margin-top: 0;
-        width: 300px;
+        }
 
-/* la taille calculée de la boite du p :
+        p {
+            border: 2px gold solid;
+            font-size: 1.3rem;
+            /* 1.3 x 10px = 13px */
+            margin-top: 0;
+            width: 300px;
+
+            /* la taille calculée de la boite du p :
       border-left 2px +  width 300px + border-right 2px = TOTAL 304px */
 
-    }
+        }
 
-    article{
-        border: 2px silver solid;
-        width: 50%;
+        article {
+            border: 2px silver solid;
+            width: 50%;
 
-        /* pour éviter que cet article soit plus petit que 160px on utilise le min-width */
-        min-width: 160px;
+            /* pour éviter que cet article soit plus petit que 160px on utilise le min-width */
+            min-width: 160px;
 
-        /* pour éviter que cet article soit plus grand que 600px on utilise le max-width */
-        max-width: 600px;
+            /* pour éviter que cet article soit plus grand que 600px on utilise le max-width */
+            max-width: 600px;
 
-        padding: 1rem;
-        /* largeur calculée : 324px */ 
-        box-sizing: border-box;
-        /* avec le box-sizing:border-box, la largeur calculée sera de 300px qules que soient les border ou les paddings */
+            padding: 1rem;
+            /* largeur calculée : 324px */
+            box-sizing: border-box;
+            /* avec le box-sizing:border-box, la largeur calculée sera de 300px quelque soient les border ou les paddings */
 
-        /* pour centrer l'article horizontalemlent dans le body */
-        margin: 0 auto;
-    }
+            /* pour centrer l'article horizontalemlent dans le body */
+            margin: 0 auto;
+        }
 
-    h2{
-        background: coral;
-        width: 57.9710%; /* 160px converti en %
+        h2 {
+            background: coral;
+            width: 57.9710%;
+            /* 160px converti en %
        ( cible 160px divisé par contexte 276px ) x 100 = 57.9710 résultat en %
         */
-        /* pour centrer ce h2 dans l'article */
-        margin: 0 auto;
-    }
-
-
+            /* pour centrer ce h2 dans l'article */
+            margin: 0 auto;
+        }
     </style>
 </head>
+
 <body>
- <!-- 
+    <!-- 
     liste de balises display: block; 
     body, div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd
     new html5 : section, article, aside, nav, header, footer
     Les balises block sont des boites qui font 100% de largeur par défaut et qui sont affichées les unes sous les autres verticalement.
-    l'espace vertical qui sépare les boites c'erst de la marge. 
+    l'espace vertical qui sépare les boites sert de la marge. 
 
 
 
@@ -88,17 +94,22 @@
     liste des balise display:table-cell : td 
 -->
 
-<h1>HTML</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium commodi exercitationem delectus autem quis atque qui consequuntur dicta! Magni praesentium aspernatur repellendus nostrum aliquam placeat hic fuga minus distinctio vitae.</p>
+    <h1>HTML</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium commodi exercitationem delectus autem quis
+        atque qui consequuntur dicta! Magni praesentium aspernatur repellendus nostrum aliquam placeat hic fuga minus
+        distinctio vitae.</p>
 
 
-<h1>CSS</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium commodi exercitationem delectus autem quis atque qui consequuntur dicta! Magni praesentium aspernatur repellendus nostrum aliquam placeat hic fuga minus distinctio vitae.</p>
+    <h1>CSS</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium commodi exercitationem delectus autem quis
+        atque qui consequuntur dicta! Magni praesentium aspernatur repellendus nostrum aliquam placeat hic fuga minus
+        distinctio vitae.</p>
 
-<article>
-    <h2>Histoire du web</h2>
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur ipsum velit, praesentium magni quasi eos, numquam veniam, quod ipsa eaque quibusdam eius optio commodi id accusantium! Sint incidunt tempore deleniti!
-</article>
+    <article>
+        <h2>Histoire du web</h2>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur ipsum velit, praesentium magni quasi eos,
+        numquam veniam, quod ipsa eaque quibusdam eius optio commodi id accusantium! Sint incidunt tempore deleniti!
+    </article>
 
 
 
@@ -106,4 +117,5 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur ipsum velit
 
 
 </body>
+
 </html>

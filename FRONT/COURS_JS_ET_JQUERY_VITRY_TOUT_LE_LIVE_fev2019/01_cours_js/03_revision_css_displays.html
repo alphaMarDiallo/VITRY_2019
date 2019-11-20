@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        p{
+        p {
             background-color: forestgreen;
             /* p étant une balise block sa largeur est de 100% */
         }
-        strong{
+
+        strong {
             background-color: yellow;
-            /* strong étant un élément inline, c'est une boite de ligne dont la largeur s'adapte au texte qu'il y a dedans */ 
-            padding: 1rem; 
+            /* strong étant un élément inline, c'est une boite de ligne dont la largeur s'adapte au texte qu'il y a dedans */
+            padding: 1rem;
             /* les marges et padding top et bottom ne fonctionne pas ou mal sur la balises inline
-           les width et height ne fonctionnent pas du tout sur les éléments inline */ 
+           les width et height ne fonctionnent pas du tout sur les éléments inline */
         }
 
-        em{
+        em {
             background-color: thistle;
             padding: 1rem;
             display: inline-block;
         }
 
-        ul{
+        ul {
             border: 2px crimson solid;
             list-style: none;
 
@@ -32,40 +34,47 @@
             /* reset de ce padding */
             padding-left: 0;
         }
-        li{
+
+        li {
             border: 2px gold solid;
             display: inline-block;
             padding: 1rem;
         }
-        
-        section{
+
+        section {
             border: 2px teal solid;
             width: 60%;
         }
-        section div{
+
+        section div {
             border: 2px firebrick solid;
             box-sizing: border-box;
             width: 50%;
             padding: 1rem;
             float: left;
-            /* avec le float les div sortent du flux, le parent section ne les contient plus */ 
+            /* avec le float les div sortent du flux, le parent section ne les contient plus */
         }
+
         /* boite à outils des float : le clearfix, pour l'utiliser on attribue la class="clearfix" à la balise parente des flottants */
-        .clearfix:after{
+        .clearfix:after {
             content: '';
             display: table;
             clear: both;
         }
-
-    
     </style>
 </head>
+
 <body>
-    <p>Lorem ipsum dolor, <strong>Du gras</strong> sit amet consectetur adipisicing elit. Eum enim reiciendis in praesentium culpa ut quos nostrum vel, ipsam ab sapiente obcaecati officiis molestias ad assumenda nulla consequatur quis sequi.</p>
+    <p>Lorem ipsum dolor, <strong>Du gras</strong> sit amet consectetur adipisicing elit. Eum enim reiciendis in
+        praesentium culpa ut quos nostrum vel, ipsam ab sapiente obcaecati officiis molestias ad assumenda nulla
+        consequatur quis sequi.</p>
 
-    <p>Lorem ipsum dolor, <em>De l'italic</em> sit amet consectetur adipisicing elit. Eum enim reiciendis in praesentium culpa ut quos nostrum vel, ipsam ab sapiente obcaecati officiis molestias ad assumenda nulla consequatur quis sequi.</p>
+    <p>Lorem ipsum dolor, <em>De l'italic</em> sit amet consectetur adipisicing elit. Eum enim reiciendis in praesentium
+        culpa ut quos nostrum vel, ipsam ab sapiente obcaecati officiis molestias ad assumenda nulla consequatur quis
+        sequi.</p>
 
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum enim reiciendis in praesentium culpa ut quos nostrum vel, ipsam ab sapiente obcaecati officiis molestias ad assumenda nulla consequatur quis sequi.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum enim reiciendis in praesentium culpa ut quos
+        nostrum vel, ipsam ab sapiente obcaecati officiis molestias ad assumenda nulla consequatur quis sequi.</p>
 
     <ul>
         <li>Pomme</li>
@@ -80,4 +89,5 @@
         <div>TROIS</div>
     </section>
 </body>
+
 </html>
